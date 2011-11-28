@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    IBOutlet UIButton * startButton;
+}
+
+- (IBAction) startButtonPressed:(id) sender; 
+- (IBAction) showSettings:(id) sender;
+- (void) finishedEditingSettings;
 
 @end

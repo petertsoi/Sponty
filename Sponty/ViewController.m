@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "SettingsViewController.h"
+
 @implementation ViewController
 
 - (void)didReceiveMemoryWarning
@@ -17,6 +19,20 @@
 }
 
 #pragma mark - View lifecycle
+
+- (IBAction) startButtonPressed:(id) sender {
+    NSLog(@"Test");
+}
+
+- (IBAction) showSettings:(id) sender {
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:[NSBundle mainBundle]];
+    settingsVC.delegate = self;
+    [self presentModalViewController:settingsVC animated:YES];
+}
+
+- (void) finishedEditingSettings {
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad
 {
