@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class PlaceViewController;
+
 @interface ViewController : UIViewController {
     IBOutlet UIButton * startButton;
+    PlaceViewController * placeVC;
 }
 
 - (IBAction) startButtonPressed:(id) sender; 
 - (IBAction) showSettings:(id) sender;
 - (void) finishedEditingSettings;
+- (PlaceViewController *) getNextPlace;
+- (void) switchedToNewPlace:(PlaceViewController *)newPlace;
+- (void) showNextPlace;
 
 @end

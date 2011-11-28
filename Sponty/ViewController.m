@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+#import "PlaceViewController.h"
 #import "SettingsViewController.h"
 
 @implementation ViewController
@@ -21,13 +22,40 @@
 #pragma mark - View lifecycle
 
 - (IBAction) startButtonPressed:(id) sender {
-    NSLog(@"Test");
+    placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle]];
+    [self switchedToNewPlace:placeVC];
 }
 
 - (IBAction) showSettings:(id) sender {
     SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:[NSBundle mainBundle]];
     settingsVC.delegate = self;
     [self presentModalViewController:settingsVC animated:YES];
+}
+
+- (void) switchedToNewPlace:(PlaceViewController *)newPlace {
+    placeVC = newPlace;
+    placeVC.delegate = self;
+    self.view = newPlace.view;
+}
+
+- (PlaceViewController *) getNextPlace {
+    PlaceViewController *next = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle]];
+    next.delegate = self;
+    return next;
+}
+
+- (void) showNextPlace {
+    //NSLog(@"Switching");
+    PlaceViewController *nextPlace = [self getNextPlace];
+    /*[UIView transitionWithView:self.view
+                      duration:0.2
+                       options:UIViewAnimationOptionTransitionCurlUp
+                    animations:^{ [self.view addSubview:nextPlace.view]; }
+                    completion:NULL];*/
+    /*[UIView transitionFromView:self.view toView:nextPlace.view duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
+        //[self switchedToNewPlace:nextPlace];
+    }];*/
+    [self switchedToNewPlace:nextPlace];
 }
 
 - (void) finishedEditingSettings {
