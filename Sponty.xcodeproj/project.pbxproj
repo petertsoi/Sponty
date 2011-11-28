@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A7C254414836C11003DA519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254314836C11003DA519 /* UIKit.framework */; };
+		0A7C254614836C11003DA519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254514836C11003DA519 /* Foundation.framework */; };
+		0A7C254814836C11003DA519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254714836C11003DA519 /* CoreGraphics.framework */; };
+		0A7C254E14836C11003DA519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C254C14836C11003DA519 /* InfoPlist.strings */; };
+		0A7C255014836C11003DA519 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C254F14836C11003DA519 /* main.m */; };
+		0A7C255414836C11003DA519 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C255314836C11003DA519 /* AppDelegate.m */; };
+		0A7C255714836C11003DA519 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C255614836C11003DA519 /* ViewController.m */; };
+		0A7C255A14836C11003DA519 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C255814836C11003DA519 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A7C253F14836C11003DA519 /* Sponty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sponty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A7C254314836C11003DA519 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0A7C254514836C11003DA519 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A7C254714836C11003DA519 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0A7C254B14836C11003DA519 /* Sponty-Info.plist */ = {isa = PBXFileReference; path = "Sponty-Info.plist"; sourceTree = "<group>"; };
+		0A7C254D14836C11003DA519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A7C254F14836C11003DA519 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A7C255114836C11003DA519 /* Sponty-Prefix.pch */ = {isa = PBXFileReference; path = "Sponty-Prefix.pch"; sourceTree = "<group>"; };
+		0A7C255214836C11003DA519 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		0A7C255314836C11003DA519 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A7C255514836C11003DA519 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		0A7C255614836C11003DA519 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0A7C255914836C11003DA519 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A7C253C14836C11003DA519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7C254414836C11003DA519 /* UIKit.framework in Frameworks */,
+				0A7C254614836C11003DA519 /* Foundation.framework in Frameworks */,
+				0A7C254814836C11003DA519 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A7C253414836C10003DA519 = {
+			isa = PBXGroup;
+			children = (
+				0A7C254914836C11003DA519 /* Sponty */,
+				0A7C254214836C11003DA519 /* Frameworks */,
+				0A7C254014836C11003DA519 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A7C254014836C11003DA519 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A7C253F14836C11003DA519 /* Sponty.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A7C254214836C11003DA519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A7C254314836C11003DA519 /* UIKit.framework */,
+				0A7C254514836C11003DA519 /* Foundation.framework */,
+				0A7C254714836C11003DA519 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A7C254914836C11003DA519 /* Sponty */ = {
+			isa = PBXGroup;
+			children = (
+				0A7C255214836C11003DA519 /* AppDelegate.h */,
+				0A7C255314836C11003DA519 /* AppDelegate.m */,
+				0A7C255514836C11003DA519 /* ViewController.h */,
+				0A7C255614836C11003DA519 /* ViewController.m */,
+				0A7C255814836C11003DA519 /* ViewController.xib */,
+				0A7C254A14836C11003DA519 /* Supporting Files */,
+			);
+			path = Sponty;
+			sourceTree = "<group>";
+		};
+		0A7C254A14836C11003DA519 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A7C254B14836C11003DA519 /* Sponty-Info.plist */,
+				0A7C254C14836C11003DA519 /* InfoPlist.strings */,
+				0A7C254F14836C11003DA519 /* main.m */,
+				0A7C255114836C11003DA519 /* Sponty-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A7C253E14836C11003DA519 /* Sponty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A7C255D14836C11003DA519 /* Build configuration list for PBXNativeTarget "Sponty" */;
+			buildPhases = (
+				0A7C253B14836C11003DA519 /* Sources */,
+				0A7C253C14836C11003DA519 /* Frameworks */,
+				0A7C253D14836C11003DA519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sponty;
+			productName = Sponty;
+			productReference = 0A7C253F14836C11003DA519 /* Sponty.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A7C253614836C10003DA519 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Apple Inc";
+			};
+			buildConfigurationList = 0A7C253914836C10003DA519 /* Build configuration list for PBXProject "Sponty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A7C253414836C10003DA519;
+			productRefGroup = 0A7C254014836C11003DA519 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A7C253E14836C11003DA519 /* Sponty */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A7C253D14836C11003DA519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7C254E14836C11003DA519 /* InfoPlist.strings in Resources */,
+				0A7C255A14836C11003DA519 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A7C253B14836C11003DA519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7C255014836C11003DA519 /* main.m in Sources */,
+				0A7C255414836C11003DA519 /* AppDelegate.m in Sources */,
+				0A7C255714836C11003DA519 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0A7C254C14836C11003DA519 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A7C254D14836C11003DA519 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0A7C255814836C11003DA519 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A7C255914836C11003DA519 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A7C255B14836C11003DA519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A7C255C14836C11003DA519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A7C255E14836C11003DA519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
+				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A7C255F14836C11003DA519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
+				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A7C253914836C10003DA519 /* Build configuration list for PBXProject "Sponty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A7C255B14836C11003DA519 /* Debug */,
+				0A7C255C14836C11003DA519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A7C255D14836C11003DA519 /* Build configuration list for PBXNativeTarget "Sponty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A7C255E14836C11003DA519 /* Debug */,
+				0A7C255F14836C11003DA519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A7C253614836C10003DA519 /* Project object */;
+}
