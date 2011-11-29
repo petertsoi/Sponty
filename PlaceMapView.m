@@ -14,23 +14,17 @@
 
 @synthesize delegate = mDelegate;
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        NSLog(@"Creating map view");
-        UIButton * hideButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [hideButton setFrame:CGRectMake(50, 40, 220, 30)];
-        [hideButton setTitle:@"Hello" forState:UIControlStateNormal];
-        [hideButton addTarget:self action:@selector(hideMapView) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:hideButton];
-    }
-    return self;
-} 
+- (void) roundCorners {
+    mMapView.layer.cornerRadius = 10.0;
+    mMapView.layer.masksToBounds = YES;
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 37.827819;
+    zoomLocation.longitude = -122.250345;
+    MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, MKCoordinateSpanMake(0.011966,0.016007));
+    [mMapView setRegion:region animated:YES];
+}
 
-- (void) hideMapView {
-    NSLog(@"Other hide");
+- (IBAction) hideMapView:(id)sender {
     [mDelegate hideMapView];
 }
 

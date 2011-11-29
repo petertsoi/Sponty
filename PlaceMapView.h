@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @class PlaceViewController;
 
 @interface PlaceMapView : UIView {
     PlaceViewController * mDelegate;
+    IBOutlet MKMapView * mMapView;
 }
 
 @property (nonatomic, retain) PlaceViewController * delegate;
+
+- (void) roundCorners;
 
 @end

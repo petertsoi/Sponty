@@ -71,7 +71,7 @@
 					<object class="IBUIButton" id="664153552">
 						<reference key="NSNextResponder" ref="463400809"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{198, 411}, {72, 37}}</string>
+						<string key="NSFrame">{{190, 407}, {115, 43}}</string>
 						<reference key="NSSuperview" ref="463400809"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -81,7 +81,6 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">No</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="1017050587">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -93,6 +92,10 @@
 						<object class="NSColor" key="IBUINormalTitleShadowColor" id="195636092">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NotMe.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="973860635">
 							<int key="type">2</int>
@@ -107,7 +110,7 @@
 					<object class="IBUIButton" id="218103447">
 						<reference key="NSNextResponder" ref="463400809"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{30, 411}, {72, 37}}</string>
+						<string key="NSFrame">{{13, 407}, {162, 42}}</string>
 						<reference key="NSSuperview" ref="463400809"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="664153552"/>
@@ -117,13 +120,16 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Yes</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1017050587"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="195636092"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">ShowButton.png</string>
+						</object>
 						<reference key="IBUIFontDescription" ref="973860635"/>
 						<reference key="IBUIFont" ref="869680606"/>
 					</object>
@@ -195,10 +201,10 @@
 						<int key="objectID">3</int>
 						<reference key="object" ref="463400809"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="218103447"/>
-							<reference ref="664153552"/>
 							<reference ref="573719037"/>
 							<reference ref="75558307"/>
+							<reference ref="218103447"/>
+							<reference ref="664153552"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -309,6 +315,10 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NotMe.png">{115, 43}</string>
+			<string key="ShowButton.png">{163, 44}</string>
+		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
 </archive>

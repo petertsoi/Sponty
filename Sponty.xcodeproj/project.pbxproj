@@ -25,6 +25,14 @@
 		0A7C2565148374DC003DA519 /* CustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2564148374DC003DA519 /* CustomNavBar.m */; };
 		0A7C25681483781A003DA519 /* CustomNavBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C25671483781A003DA519 /* CustomNavBG.png */; };
 		0A7C256A14837836003DA519 /* CustomNavBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C256914837836003DA519 /* CustomNavBG@2x.png */; };
+		0AB658FC14845AE500716B6E /* PlaceMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB658FB14845AE500716B6E /* PlaceMapView.xib */; };
+		0AB6590014845C8200716B6E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB658FE14845C6C00716B6E /* MapKit.framework */; };
+		0AB659031484622B00716B6E /* ShowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659011484622B00716B6E /* ShowButton.png */; };
+		0AB659041484622B00716B6E /* ShowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659021484622B00716B6E /* ShowButton@2x.png */; };
+		0AB659071484629D00716B6E /* NotMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659051484629D00716B6E /* NotMe.png */; };
+		0AB659081484629D00716B6E /* NotMe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659061484629D00716B6E /* NotMe@2x.png */; };
+		0AB6590B148463D800716B6E /* FeedbackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB65909148463D800716B6E /* FeedbackButton.png */; };
+		0AB6590C148463D800716B6E /* FeedbackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6590A148463D800716B6E /* FeedbackButton@2x.png */; };
 		0ABE131114838154003FFE86 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE130F14838154003FFE86 /* SettingsViewController.xib */; };
 		0ABE13151483860E003FFE86 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE13141483860E003FFE86 /* SettingsViewController.m */; };
 		0ABE13181483898C003FFE86 /* SettingsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE13161483898C003FFE86 /* SettingsBG.png */; };
@@ -60,6 +68,14 @@
 		0A7C2564148374DC003DA519 /* CustomNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavBar.m; sourceTree = "<group>"; };
 		0A7C25671483781A003DA519 /* CustomNavBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CustomNavBG.png; path = png/CustomNavBG.png; sourceTree = "<group>"; };
 		0A7C256914837836003DA519 /* CustomNavBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CustomNavBG@2x.png"; path = "png/CustomNavBG@2x.png"; sourceTree = "<group>"; };
+		0AB658FB14845AE500716B6E /* PlaceMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceMapView.xib; sourceTree = "<group>"; };
+		0AB658FE14845C6C00716B6E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0AB659011484622B00716B6E /* ShowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowButton.png; path = png/ShowButton.png; sourceTree = "<group>"; };
+		0AB659021484622B00716B6E /* ShowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ShowButton@2x.png"; path = "png/ShowButton@2x.png"; sourceTree = "<group>"; };
+		0AB659051484629D00716B6E /* NotMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NotMe.png; path = png/NotMe.png; sourceTree = "<group>"; };
+		0AB659061484629D00716B6E /* NotMe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NotMe@2x.png"; path = "png/NotMe@2x.png"; sourceTree = "<group>"; };
+		0AB65909148463D800716B6E /* FeedbackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FeedbackButton.png; path = png/FeedbackButton.png; sourceTree = "<group>"; };
+		0AB6590A148463D800716B6E /* FeedbackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FeedbackButton@2x.png"; path = "png/FeedbackButton@2x.png"; sourceTree = "<group>"; };
 		0ABE131014838154003FFE86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		0ABE13131483860E003FFE86 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		0ABE13141483860E003FFE86 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -73,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB6590014845C8200716B6E /* MapKit.framework in Frameworks */,
 				0A7C254414836C11003DA519 /* UIKit.framework in Frameworks */,
 				0A7C254614836C11003DA519 /* Foundation.framework in Frameworks */,
 				0A7C254814836C11003DA519 /* CoreGraphics.framework in Frameworks */,
@@ -129,6 +146,7 @@
 				0ABE13141483860E003FFE86 /* SettingsViewController.m */,
 				0A7C255814836C11003DA519 /* ViewController.xib */,
 				0ABE130F14838154003FFE86 /* SettingsViewController.xib */,
+				0AB658FB14845AE500716B6E /* PlaceMapView.xib */,
 				0A7C256014837097003DA519 /* PlaceViewController.xib */,
 				0A56357C1484564F000A1EEE /* PlaceDetailView.xib */,
 				0A7C254A14836C11003DA519 /* Supporting Files */,
@@ -139,6 +157,7 @@
 		0A7C254A14836C11003DA519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0AB658FE14845C6C00716B6E /* MapKit.framework */,
 				0A7C254B14836C11003DA519 /* Sponty-Info.plist */,
 				0A7C254C14836C11003DA519 /* InfoPlist.strings */,
 				0A7C254F14836C11003DA519 /* main.m */,
@@ -150,6 +169,12 @@
 		0A7C25661483780B003DA519 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				0AB65909148463D800716B6E /* FeedbackButton.png */,
+				0AB6590A148463D800716B6E /* FeedbackButton@2x.png */,
+				0AB659051484629D00716B6E /* NotMe.png */,
+				0AB659061484629D00716B6E /* NotMe@2x.png */,
+				0AB659011484622B00716B6E /* ShowButton.png */,
+				0AB659021484622B00716B6E /* ShowButton@2x.png */,
 				0A0D468B1484141C00B6B32D /* PlacePageBG.png */,
 				0A0D468C1484141C00B6B32D /* PlacePageBG@2x.png */,
 				0AFD655F14837D6500537619 /* Santa Fe LET.ttf */,
@@ -224,6 +249,13 @@
 				0A0D468D1484141C00B6B32D /* PlacePageBG.png in Resources */,
 				0A0D468E1484141C00B6B32D /* PlacePageBG@2x.png in Resources */,
 				0A56357D1484564F000A1EEE /* PlaceDetailView.xib in Resources */,
+				0AB658FC14845AE500716B6E /* PlaceMapView.xib in Resources */,
+				0AB659031484622B00716B6E /* ShowButton.png in Resources */,
+				0AB659041484622B00716B6E /* ShowButton@2x.png in Resources */,
+				0AB659071484629D00716B6E /* NotMe.png in Resources */,
+				0AB659081484629D00716B6E /* NotMe@2x.png in Resources */,
+				0AB6590B148463D800716B6E /* FeedbackButton.png in Resources */,
+				0AB6590C148463D800716B6E /* FeedbackButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,18 +46,17 @@
 }
 
 - (IBAction)showMapView:(id)sender {
-    mapView = [[PlaceMapView alloc] initWithFrame:self.view.frame];
-    [mapView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PlacePageBG"]]];
+    mapView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0];
     mapView.delegate = self;
     [UIView transitionFromView:detailView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
-        
+        [mapView roundCorners];
     }];
 }
 
 - (IBAction)showNextPlace:(id)sender {
     PlaceDetailView * newDetailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
     [newDetailView retain];
-    [newDetailView setPlaceName:@"Jon's Dollar Scoop"];
+    [newDetailView setPlaceName:@"Fenton's Ice Cream"];
     
     [UIView transitionFromView:detailView toView:newDetailView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
         [detailView release];
