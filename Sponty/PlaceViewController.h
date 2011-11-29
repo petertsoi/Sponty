@@ -10,11 +10,12 @@
 
 @class ViewController;
 @class PlaceMapView;
+@class PlaceDetailView;
 
 @interface PlaceViewController : UIViewController {
     ViewController * mDelegate;
     PlaceMapView * mapView;
-    UIView * detailView;
+    PlaceDetailView * detailView;
 }
 @property (nonatomic, strong) ViewController * delegate;
 

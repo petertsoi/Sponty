@@ -9,6 +9,7 @@
 #import "PlaceViewController.h"
 
 #import "ViewController.h"
+#import "PlaceDetailView.h"
 #import "PlaceMapView.h"
 
 @implementation PlaceViewController
@@ -20,7 +21,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
+        detailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
+        [detailView retain];
+        [detailView setPlaceName:@"Fenton's Ice Cream"];
+        [self.view addSubview:detailView];
     }
     return self;
 }
@@ -44,15 +48,23 @@
 - (IBAction)showMapView:(id)sender {
     mapView = [[PlaceMapView alloc] initWithFrame:self.view.frame];
     [mapView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PlacePageBG"]]];
-    detailView=self.view;
     mapView.delegate = self;
-    [UIView transitionFromView:self.view toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
+    [UIView transitionFromView:detailView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
         
     }];
 }
 
 - (IBAction)showNextPlace:(id)sender {
-    [mDelegate showNextPlace];
+    PlaceDetailView * newDetailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
+    [newDetailView retain];
+    [newDetailView setPlaceName:@"Jon's Dollar Scoop"];
+    
+    [UIView transitionFromView:detailView toView:newDetailView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
+        [detailView release];
+        detailView = newDetailView;
+    }];
+    
+    
 }
 
 #pragma mark - View lifecycle
@@ -63,14 +75,14 @@
 {
 }
 */
-
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PlacePageBG"]]];
+    
 }
-
+*/
 - (void)viewDidUnload
 {
     [super viewDidUnload];

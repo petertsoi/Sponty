@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlaceDetailView : UIView
+@interface PlaceDetailView : UIView {
+    IBOutlet UINavigationBar * titleBar;
+}
+
+- (void) setPlaceName: (NSString* )name;
 
 @end

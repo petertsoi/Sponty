@@ -12,6 +12,7 @@
 		0A0D468E1484141C00B6B32D /* PlacePageBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D468C1484141C00B6B32D /* PlacePageBG@2x.png */; };
 		0A0D46941484186F00B6B32D /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46931484186F00B6B32D /* PlaceMapView.m */; };
 		0A56357B14845608000A1EEE /* PlaceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56357A14845608000A1EEE /* PlaceDetailView.m */; };
+		0A56357D1484564F000A1EEE /* PlaceDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A56357C1484564F000A1EEE /* PlaceDetailView.xib */; };
 		0A7C254414836C11003DA519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254314836C11003DA519 /* UIKit.framework */; };
 		0A7C254614836C11003DA519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254514836C11003DA519 /* Foundation.framework */; };
 		0A7C254814836C11003DA519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254714836C11003DA519 /* CoreGraphics.framework */; };
@@ -40,6 +41,7 @@
 		0A0D46931484186F00B6B32D /* PlaceMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapView.m; sourceTree = "<group>"; };
 		0A56357914845608000A1EEE /* PlaceDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailView.h; sourceTree = "<group>"; };
 		0A56357A14845608000A1EEE /* PlaceDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailView.m; sourceTree = "<group>"; };
+		0A56357C1484564F000A1EEE /* PlaceDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceDetailView.xib; sourceTree = "<group>"; };
 		0A7C253F14836C11003DA519 /* Sponty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sponty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7C254314836C11003DA519 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A7C254514836C11003DA519 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 				0A7C255814836C11003DA519 /* ViewController.xib */,
 				0ABE130F14838154003FFE86 /* SettingsViewController.xib */,
 				0A7C256014837097003DA519 /* PlaceViewController.xib */,
+				0A56357C1484564F000A1EEE /* PlaceDetailView.xib */,
 				0A7C254A14836C11003DA519 /* Supporting Files */,
 			);
 			path = Sponty;
@@ -220,6 +223,7 @@
 				0ABE13191483898C003FFE86 /* SettingsBG@2x.png in Resources */,
 				0A0D468D1484141C00B6B32D /* PlacePageBG.png in Resources */,
 				0A0D468E1484141C00B6B32D /* PlacePageBG@2x.png in Resources */,
+				0A56357D1484564F000A1EEE /* PlaceDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
