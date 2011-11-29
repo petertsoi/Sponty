@@ -47,8 +47,8 @@
 		0A0D46881484129400B6B32D /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		0A0D468B1484141C00B6B32D /* PlacePageBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlacePageBG.png; path = png/PlacePageBG.png; sourceTree = "<group>"; };
 		0A0D468C1484141C00B6B32D /* PlacePageBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlacePageBG@2x.png"; path = "png/PlacePageBG@2x.png"; sourceTree = "<group>"; };
-		0A0D46921484186F00B6B32D /* PlaceMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMapView.h; sourceTree = "<group>"; };
-		0A0D46931484186F00B6B32D /* PlaceMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapView.m; sourceTree = "<group>"; };
+		0A0D46921484186F00B6B32D /* PlaceMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceMapView.h; path = ../PlaceMapView.h; sourceTree = "<group>"; };
+		0A0D46931484186F00B6B32D /* PlaceMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceMapView.m; path = ../PlaceMapView.m; sourceTree = "<group>"; };
 		0A56357914845608000A1EEE /* PlaceDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailView.h; sourceTree = "<group>"; };
 		0A56357A14845608000A1EEE /* PlaceDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailView.m; sourceTree = "<group>"; };
 		0A56357C1484564F000A1EEE /* PlaceDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceDetailView.xib; sourceTree = "<group>"; };
@@ -106,8 +106,6 @@
 		0A7C253414836C10003DA519 = {
 			isa = PBXGroup;
 			children = (
-				0A0D46921484186F00B6B32D /* PlaceMapView.h */,
-				0A0D46931484186F00B6B32D /* PlaceMapView.m */,
 				0A7C25661483780B003DA519 /* png */,
 				0A7C254914836C11003DA519 /* Sponty */,
 				0A7C254214836C11003DA519 /* Frameworks */,
@@ -144,6 +142,8 @@
 				0A7C255614836C11003DA519 /* ViewController.m */,
 				0A56357914845608000A1EEE /* PlaceDetailView.h */,
 				0A56357A14845608000A1EEE /* PlaceDetailView.m */,
+				0A0D46921484186F00B6B32D /* PlaceMapView.h */,
+				0A0D46931484186F00B6B32D /* PlaceMapView.m */,
 				0A0D46871484129400B6B32D /* PlaceViewController.h */,
 				0A0D46881484129400B6B32D /* PlaceViewController.m */,
 				0ABE13131483860E003FFE86 /* SettingsViewController.h */,
