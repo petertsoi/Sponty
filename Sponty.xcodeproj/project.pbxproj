@@ -33,6 +33,8 @@
 		0AB659081484629D00716B6E /* NotMe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659061484629D00716B6E /* NotMe@2x.png */; };
 		0AB6590B148463D800716B6E /* FeedbackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB65909148463D800716B6E /* FeedbackButton.png */; };
 		0AB6590C148463D800716B6E /* FeedbackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6590A148463D800716B6E /* FeedbackButton@2x.png */; };
+		0AB659161484697200716B6E /* icecream.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659141484697200716B6E /* icecream.png */; };
+		0AB659171484697200716B6E /* icecream@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659151484697200716B6E /* icecream@2x.png */; };
 		0ABE131114838154003FFE86 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE130F14838154003FFE86 /* SettingsViewController.xib */; };
 		0ABE13151483860E003FFE86 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE13141483860E003FFE86 /* SettingsViewController.m */; };
 		0ABE13181483898C003FFE86 /* SettingsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE13161483898C003FFE86 /* SettingsBG.png */; };
@@ -76,6 +78,8 @@
 		0AB659061484629D00716B6E /* NotMe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NotMe@2x.png"; path = "png/NotMe@2x.png"; sourceTree = "<group>"; };
 		0AB65909148463D800716B6E /* FeedbackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FeedbackButton.png; path = png/FeedbackButton.png; sourceTree = "<group>"; };
 		0AB6590A148463D800716B6E /* FeedbackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FeedbackButton@2x.png"; path = "png/FeedbackButton@2x.png"; sourceTree = "<group>"; };
+		0AB659141484697200716B6E /* icecream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icecream.png; path = png/icecream.png; sourceTree = "<group>"; };
+		0AB659151484697200716B6E /* icecream@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icecream@2x.png"; path = "png/icecream@2x.png"; sourceTree = "<group>"; };
 		0ABE131014838154003FFE86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		0ABE13131483860E003FFE86 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		0ABE13141483860E003FFE86 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -134,14 +138,14 @@
 			children = (
 				0A7C255214836C11003DA519 /* AppDelegate.h */,
 				0A7C255314836C11003DA519 /* AppDelegate.m */,
+				0A7C2563148374DC003DA519 /* CustomNavBar.h */,
+				0A7C2564148374DC003DA519 /* CustomNavBar.m */,
 				0A7C255514836C11003DA519 /* ViewController.h */,
 				0A7C255614836C11003DA519 /* ViewController.m */,
 				0A56357914845608000A1EEE /* PlaceDetailView.h */,
 				0A56357A14845608000A1EEE /* PlaceDetailView.m */,
 				0A0D46871484129400B6B32D /* PlaceViewController.h */,
 				0A0D46881484129400B6B32D /* PlaceViewController.m */,
-				0A7C2563148374DC003DA519 /* CustomNavBar.h */,
-				0A7C2564148374DC003DA519 /* CustomNavBar.m */,
 				0ABE13131483860E003FFE86 /* SettingsViewController.h */,
 				0ABE13141483860E003FFE86 /* SettingsViewController.m */,
 				0A7C255814836C11003DA519 /* ViewController.xib */,
@@ -169,6 +173,8 @@
 		0A7C25661483780B003DA519 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				0AB659141484697200716B6E /* icecream.png */,
+				0AB659151484697200716B6E /* icecream@2x.png */,
 				0AB65909148463D800716B6E /* FeedbackButton.png */,
 				0AB6590A148463D800716B6E /* FeedbackButton@2x.png */,
 				0AB659051484629D00716B6E /* NotMe.png */,
@@ -256,6 +262,8 @@
 				0AB659081484629D00716B6E /* NotMe@2x.png in Resources */,
 				0AB6590B148463D800716B6E /* FeedbackButton.png in Resources */,
 				0AB6590C148463D800716B6E /* FeedbackButton@2x.png in Resources */,
+				0AB659161484697200716B6E /* icecream.png in Resources */,
+				0AB659171484697200716B6E /* icecream@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,8 +21,10 @@
 
 - (void) setPlaceName: (NSString* )name {
     [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PlacePageBG"]]];
+    [scrollView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"icecream"]]];
     titleBar.topItem.title = name;
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

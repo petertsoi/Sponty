@@ -10,6 +10,8 @@
 
 @interface PlaceDetailView : UIView {
     IBOutlet UINavigationBar * titleBar;
+    IBOutlet UIScrollView *scrollView;
+	IBOutlet UIPageControl *pageControl;
 }
 
 - (void) setPlaceName: (NSString* )name;
