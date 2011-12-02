@@ -23,6 +23,15 @@
     return self;
 }
 
+- (void) setPanoramaURL: (NSString *) panoURL {
+    UIWebView * panoView = [[UIWebView alloc] initWithFrame:feature.frame];
+    
+    NSURL * reqURL = [NSURL URLWithString:panoURL];
+    NSURLRequest * reqObj = [NSURLRequest requestWithURL:reqURL];
+    [panoView loadRequest:reqObj];
+    [feature addSubview:panoView];
+}
+
 - (void) setPlaceName: (NSString* )name {
     [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PlacePageBG"]]];
     [titleBar setTitle:name];

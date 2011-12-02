@@ -70,7 +70,8 @@
     switch (counter) {
         case 1:
             [newDetailView setPlaceName:@"Santa Cruz Scoop"];
-            [newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
+            //[newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
+            [newDetailView setPanoramaURL:@"http://photosynth.net/view.aspx?cid=fab244bc-86f9-413e-ad41-bed9fda5c701"];
             [newDetailView setTimeSuggest:@"It's open for another 6 hours and 12 minutes."];
             [newDetailView setWeatherSuggest:@"On a chilly day like this, hot fudge is the way to go."];
             [newDetailView setDistanceSuggest:@"It's a walkable 0.1 miles away."];

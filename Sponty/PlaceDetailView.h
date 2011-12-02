@@ -24,6 +24,7 @@
 @property (nonatomic, retain) IBOutlet UILabel * timeSuggestion; 
 @property (nonatomic, retain) IBOutlet UILabel * distanceSuggestion; 
 
+- (void) setPanoramaURL: (NSString *) panoURL;
 - (void) setPlaceName: (NSString* )name;
 - (void) setFeatureImage:(UIImage *)featureImage;
 - (void) setWeatherSuggest:(NSString *) suggestion;

@@ -48,6 +48,8 @@
 		0ABE13151483860E003FFE86 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE13141483860E003FFE86 /* SettingsViewController.m */; };
 		0ABE13181483898C003FFE86 /* SettingsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE13161483898C003FFE86 /* SettingsBG.png */; };
 		0ABE13191483898C003FFE86 /* SettingsBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE13171483898C003FFE86 /* SettingsBG@2x.png */; };
+		0ACDA83C14898B8600187122 /* backbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDA83A14898B8600187122 /* backbtn.png */; };
+		0ACDA83D14898B8600187122 /* backbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDA83B14898B8600187122 /* backbtn@2x.png */; };
 		0ADD360C1488C6DC0070D2E4 /* boardwalk.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD360A1488C6DC0070D2E4 /* boardwalk.png */; };
 		0ADD360D1488C6DC0070D2E4 /* boardwalk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD360B1488C6DC0070D2E4 /* boardwalk@2x.png */; };
 		0ADD36101488C9130070D2E4 /* bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD360E1488C9130070D2E4 /* bowling.png */; };
@@ -112,6 +114,8 @@
 		0ABE13141483860E003FFE86 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0ABE13161483898C003FFE86 /* SettingsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsBG.png; path = png/SettingsBG.png; sourceTree = "<group>"; };
 		0ABE13171483898C003FFE86 /* SettingsBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SettingsBG@2x.png"; path = "png/SettingsBG@2x.png"; sourceTree = "<group>"; };
+		0ACDA83A14898B8600187122 /* backbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backbtn.png; path = png/backbtn.png; sourceTree = "<group>"; };
+		0ACDA83B14898B8600187122 /* backbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backbtn@2x.png"; path = "png/backbtn@2x.png"; sourceTree = "<group>"; };
 		0ADD360A1488C6DC0070D2E4 /* boardwalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boardwalk.png; path = png/boardwalk.png; sourceTree = "<group>"; };
 		0ADD360B1488C6DC0070D2E4 /* boardwalk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "boardwalk@2x.png"; path = "png/boardwalk@2x.png"; sourceTree = "<group>"; };
 		0ADD360E1488C9130070D2E4 /* bowling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bowling.png; path = png/bowling.png; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 		0ADD36081488C6590070D2E4 /* attractions */ = {
 			isa = PBXGroup;
 			children = (
+				0ACDA83A14898B8600187122 /* backbtn.png */,
+				0ACDA83B14898B8600187122 /* backbtn@2x.png */,
 				0ADD36161488CA380070D2E4 /* pacific.png */,
 				0ADD36171488CA380070D2E4 /* pacific@2x.png */,
 				0ADD36121488C9BB0070D2E4 /* pizza.png */,
@@ -341,6 +347,8 @@
 				0ADD36151488C9BB0070D2E4 /* pizza@2x.png in Resources */,
 				0ADD36181488CA380070D2E4 /* pacific.png in Resources */,
 				0ADD36191488CA380070D2E4 /* pacific@2x.png in Resources */,
+				0ACDA83C14898B8600187122 /* backbtn.png in Resources */,
+				0ACDA83D14898B8600187122 /* backbtn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

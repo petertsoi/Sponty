@@ -24,10 +24,28 @@
     zoomLocation.longitude = -122.026584;
     MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, MKCoordinateSpanMake(0.00984,0.013497));
     [mMapView setRegion:region animated:YES];
+    
+    MKPlacemark * dest = [[MKPlacemark alloc] initWithCoordinate:zoomLocation addressDictionary:nil];
+    
+    [mMapView addAnnotation:dest];
 }
 
 - (IBAction) hideMapView:(id)sender {
     [mDelegate hideMapView];
 }
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
+    if(pinView == nil) {
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
+        pinView.pinColor = MKPinAnnotationColorRed;
+        pinView.animatesDrop = YES;
+    } else {
+        pinView.annotation = annotation;
+    }
+    return pinView;
+}
+                                  
+                                  
 
 @end

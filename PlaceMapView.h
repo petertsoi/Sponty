@@ -12,7 +12,7 @@
 
 @class PlaceViewController;
 
-@interface PlaceMapView : UIView {
+@interface PlaceMapView : UIView <MKMapViewDelegate> {
     PlaceViewController * mDelegate;
     IBOutlet MKMapView * mMapView;
 }
