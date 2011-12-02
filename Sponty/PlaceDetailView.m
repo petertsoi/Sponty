@@ -8,7 +8,11 @@
 
 #import "PlaceDetailView.h"
 
+#import "CustomNavBar.h"
+
 @implementation PlaceDetailView
+
+@synthesize weatherSuggestion, distanceSuggestion, timeSuggestion;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -21,8 +25,23 @@
 
 - (void) setPlaceName: (NSString* )name {
     [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PlacePageBG"]]];
-    [scrollView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"icecream"]]];
-    titleBar.topItem.title = name;
+    [titleBar setTitle:name];
+}
+
+- (void) setFeatureImage:(UIImage *)featureImage {
+    [feature setBackgroundColor:[UIColor colorWithPatternImage:featureImage]];
+}
+
+- (void) setDistanceSuggest:(NSString *) suggestion{
+    [distanceSuggestion setText:suggestion];
+}
+
+- (void) setWeatherSuggest:(NSString *) suggestion{
+    weatherSuggestion.text = suggestion;
+}
+
+- (void) setTimeSuggest:(NSString *) suggestion{
+    timeSuggestion.text = suggestion;
 }
 
 

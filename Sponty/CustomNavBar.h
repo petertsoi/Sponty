@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomNavBar : UINavigationBar
+@interface CustomNavBar : UINavigationBar {
+    UILabel * titleLabel;
+}
+
+- (void) setTitle:(NSString *) newTitle;
 
 @end

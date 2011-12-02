@@ -16,6 +16,8 @@
     ViewController * mDelegate;
     PlaceMapView * mapView;
     PlaceDetailView * detailView;
+    
+    int counter; // temp for demo
 }
 @property (nonatomic, strong) ViewController * delegate;
 

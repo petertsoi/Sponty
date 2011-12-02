@@ -16,7 +16,7 @@
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 
                                 self.frame.size.width, 53);
         UIView * contain = [[UIView alloc] initWithFrame:self.frame];
-        UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 6, self.frame.size.width, self.frame.size.height)];
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 6, self.frame.size.width, self.frame.size.height)];
         [titleLabel setFont:[UIFont fontWithName:@"Santa Fe LET" size:36]];
         [titleLabel setText:self.topItem.title];
         self.topItem.title = @"";
@@ -45,6 +45,10 @@
         return self;
     }
     return nil;
+}
+
+- (void) setTitle:(NSString *) newTitle {
+    [titleLabel setText:newTitle];
 }
 
 - (void) layoutSubviews {

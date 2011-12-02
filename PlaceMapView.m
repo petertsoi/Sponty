@@ -18,9 +18,11 @@
     mMapView.layer.cornerRadius = 10.0;
     mMapView.layer.masksToBounds = YES;
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 37.827819;
-    zoomLocation.longitude = -122.250345;
-    MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, MKCoordinateSpanMake(0.011966,0.016007));
+    //pacific st. 36.97177,-122.026584&fspn=0.00984,0.013497
+    //fentons 37.827819,-122.250345&fspn=0.011966,0.016007
+    zoomLocation.latitude = 36.97177;
+    zoomLocation.longitude = -122.026584;
+    MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, MKCoordinateSpanMake(0.00984,0.013497));
     [mMapView setRegion:region animated:YES];
 }
 

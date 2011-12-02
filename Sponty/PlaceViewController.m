@@ -20,10 +20,17 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        counter = 0;
         // Custom initialization
         detailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
         [detailView retain];
-        [detailView setPlaceName:@"Fenton's Ice Cream"];
+        
+        [detailView setPlaceName:@"Santa Cruz Boardwalk"];
+        [detailView setFeatureImage:[UIImage imageNamed:@"boardwalk"]];
+        [detailView setTimeSuggest:@"It's always open."];
+        [detailView setWeatherSuggest:@"It's a gorgeous 68º now. Go enjoy a walk on the boardwalk."];
+        [detailView setDistanceSuggest:@"Best of all, its only 0.2 miles away!"];
+        
         [self.view addSubview:detailView];
         //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
     }
@@ -56,9 +63,48 @@
 }
 
 - (IBAction)showNextPlace:(id)sender {
+    ++counter;
     PlaceDetailView * newDetailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
     [newDetailView retain];
-    [newDetailView setPlaceName:@"Fenton's Ice Cream"];
+    
+    switch (counter) {
+        case 1:
+            [newDetailView setPlaceName:@"Santa Cruz Scoop"];
+            [newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
+            [newDetailView setTimeSuggest:@"It's open for another 6 hours and 12 minutes."];
+            [newDetailView setWeatherSuggest:@"On a chilly day like this, hot fudge is the way to go."];
+            [newDetailView setDistanceSuggest:@"It's a walkable 0.1 miles away."];
+            break;
+
+        case 2:
+            [newDetailView setPlaceName:@"Boardwalk Bowl"];
+            [newDetailView setFeatureImage:[UIImage imageNamed:@"bowling"]];
+            [newDetailView setTimeSuggest:@"It's open for another 5 hours and 35 minutes."];
+            [newDetailView setWeatherSuggest:@"It's getting chilly, head over to Boardwalk Bowl to grab a lane."];
+            [newDetailView setDistanceSuggest:@"It's a short car ride away (0.4 miles)."];
+            break;
+
+        case 3:
+            [newDetailView setPlaceName:@"Woodstock Pizza"];
+            [newDetailView setFeatureImage:[UIImage imageNamed:@"pizza"]];
+            [newDetailView setTimeSuggest:@"It's open for another 6 hours and 12 minutes."];
+            [newDetailView setWeatherSuggest:@"There's nothing hot slice of pesto pizza can't solve!"];
+            [newDetailView setDistanceSuggest:@"You could walk there, its 0.3 miles away."];
+            break;
+
+        case 4:
+            [newDetailView setPlaceName:@"Pacific Street"];
+            [newDetailView setFeatureImage:[UIImage imageNamed:@"pacific"]];
+            [newDetailView setTimeSuggest:@"It's always open."];
+            [newDetailView setWeatherSuggest:@"Go enjoy this brisk night by walking under the lights."];
+            [newDetailView setDistanceSuggest:@"You're practically there!"];
+            break;
+            
+        default:
+            [newDetailView setPlaceName:@"Fenton's Ice Cream"];
+            [newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
+            break;
+    }
     
     [UIView transitionFromView:detailView toView:newDetailView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
         [detailView release];

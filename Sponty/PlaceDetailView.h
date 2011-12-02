@@ -8,12 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+@class CustomNavBar;
+
 @interface PlaceDetailView : UIView {
-    IBOutlet UINavigationBar * titleBar;
-    IBOutlet UIScrollView *scrollView;
+    IBOutlet CustomNavBar * titleBar;
+    IBOutlet UIView *feature;
 	IBOutlet UIPageControl *pageControl;
+    
+    IBOutlet UILabel * weatherSuggestion;
+    IBOutlet UILabel * timeSuggestion;
+    IBOutlet UILabel * distanceSuggestion;
 }
 
+@property (nonatomic, retain) IBOutlet UILabel * weatherSuggestion; 
+@property (nonatomic, retain) IBOutlet UILabel * timeSuggestion; 
+@property (nonatomic, retain) IBOutlet UILabel * distanceSuggestion; 
+
 - (void) setPlaceName: (NSString* )name;
+- (void) setFeatureImage:(UIImage *)featureImage;
+- (void) setWeatherSuggest:(NSString *) suggestion;
+- (void) setDistanceSuggest:(NSString *) suggestion;
+- (void) setTimeSuggest:(NSString *) suggestion;
 
 @end
