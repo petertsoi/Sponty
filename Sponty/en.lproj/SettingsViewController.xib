@@ -141,7 +141,7 @@ cmVmZXJlbmNlcy4gDVVzZSB0aGVzZSBmaWx0ZXJzIHRvIHRlbGwgdXMgYWJvdXQgdGhlbSE</string>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string type="base64-UTF8" key="IBUIText">U2hvdyBtZSBhY3Rpdml0aWVzDWludm9sdmluZyBmb29kA</string>
+						<string key="IBUIText">I can travel by car</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4zNzI1NDkwMTk2IDAuMzY4NjI3NDUxIDAuMzU2ODYyNzQ1MQA</bytes>
@@ -172,7 +172,7 @@ cmVmZXJlbmNlcy4gDVVzZSB0aGVzZSBmaWx0ZXJzIHRvIHRlbGwgdXMgYWJvdXQgdGhlbSE</string>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string type="base64-UTF8" key="IBUIText">U2hvdyBtZSBhY3Rpdml0ZXMNd2hlcmUgSSBnbyB0byBsb2NhbCBldmVudHM</string>
+						<string key="IBUIText">I'm with a group of friends</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4zNzI1NDkwMTk2IDAuMzY4NjI3NDUxIDAuMzU2ODYyNzQ1MQA</bytes>
@@ -198,7 +198,7 @@ cmVmZXJlbmNlcy4gDVVzZSB0aGVzZSBmaWx0ZXJzIHRvIHRlbGwgdXMgYWJvdXQgdGhlbSE</string>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string type="base64-UTF8" key="IBUIText">U2hvdyBtZSBhY3Rpdml0aWVzDXdoZXJlIEkgdmlzaXQgY2l0eSB2aWV3cG9pbnRzA</string>
+						<string key="IBUIText">I only want free events</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4zNzI1NDkwMTk2IDAuMzY4NjI3NDUxIDAuMzU2ODYyNzQ1MQA</bytes>
@@ -251,7 +251,6 @@ cmVmZXJlbmNlcy4gDVVzZSB0aGVzZSBmaWx0ZXJzIHRvIHRlbGwgdXMgYWJvdXQgdGhlbSE</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<bool key="IBUIOn">YES</bool>
 					</object>
 					<object class="IBUIButton" id="629965901">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -259,6 +258,7 @@ cmVmZXJlbmNlcy4gDVVzZSB0aGVzZSBmaWx0ZXJzIHRvIHRlbGwgdXMgYWJvdXQgdGhlbSE</string>
 						<string key="NSFrame">{{80, 404}, {162, 42}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

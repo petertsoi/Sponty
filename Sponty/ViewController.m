@@ -25,6 +25,10 @@
 
 - (IBAction) startButtonPressed:(id) sender {
     placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle]];
+    [self.view setBackgroundColor:[UIColor blackColor]];
+    for (int i = 0; i <= [[self.view subviews] count]; ++i) {
+        [[[self.view subviews] objectAtIndex:0] removeFromSuperview];
+    }
     [self switchedToNewPlace:placeVC];
 }
 
@@ -50,16 +54,7 @@
 }
 
 - (void) showNextPlace {
-    //NSLog(@"Switching");
     PlaceViewController *nextPlace = [self getNextPlace];
-    /*[UIView transitionWithView:self.view
-                      duration:0.2
-                       options:UIViewAnimationOptionTransitionCurlUp
-                    animations:^{ [self.view addSubview:nextPlace.view]; }
-                    completion:NULL];*/
-    /*[UIView transitionFromView:self.view toView:nextPlace.view duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
-        //[self switchedToNewPlace:nextPlace];
-    }];*/
     [self switchedToNewPlace:nextPlace];
 }
 
@@ -70,15 +65,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bgpattern"]]];
     [self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -37,7 +37,6 @@
 #endif
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    NSLog(@"Running hit test");
     [self removeFromSuperview];
     UIView * hit = [mSuperView hitTest:point withEvent:event];
     [mSuperView addSubview:self];
