@@ -10,6 +10,8 @@
 
 #import "ViewController.h"
 
+#import "MocapOverlayView.h"
+
 @implementation SettingsViewController
 
 @synthesize delegate = mDelegate;
@@ -32,6 +34,7 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SettingsBG"]]];
+    [self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
 }
 
 - (void)viewDidUnload

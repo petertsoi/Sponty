@@ -11,6 +11,8 @@
 #import "PlaceViewController.h"
 #import "SettingsViewController.h"
 
+#import "MocapOverlayView.h"
+
 @implementation ViewController
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +37,10 @@
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace {
     placeVC = newPlace;
     placeVC.delegate = self;
-    self.view = newPlace.view;
+    //self.view = newPlace.view;
+    [self.view insertSubview:newPlace.view atIndex:[[self.view subviews] count] -1];
+    
+    
 }
 
 - (PlaceViewController *) getNextPlace {
@@ -65,6 +70,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

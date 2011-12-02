@@ -15,6 +15,9 @@
     if (self) {
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 
                                 self.frame.size.width, 53);
+
+#ifndef __IPHONE_5_0
+#else
         [self setBackgroundImage:[UIImage imageNamed:@"CustomNavBG.png"] forBarMetrics:UIBarMetricsDefault];
         [[CustomNavBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
@@ -23,7 +26,9 @@
           [NSValue valueWithUIOffset:UIOffsetMake(1.5, 0.7)], UITextAttributeTextShadowOffset, 
           [UIFont fontWithName:@"Santa Fe LET" size:32.0], UITextAttributeFont, 
           nil]];
+#endif
         [self setBarStyle:UIBarStyleBlackOpaque];
+        //self.titleView.frame = CGRectMake(0, 0, 30, 50);
         return self;
     }
     return nil;

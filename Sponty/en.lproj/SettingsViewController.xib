@@ -259,7 +259,6 @@ cmVmZXJlbmNlcy4gDVVzZSB0aGVzZSBmaWx0ZXJzIHRvIHRlbGwgdXMgYWJvdXQgdGhlbSE</string>
 						<string key="NSFrame">{{80, 404}, {162, 42}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -461,7 +460,7 @@ cmVmZXJlbmNlcy4gDVVzZSB0aGVzZSBmaWx0ZXJzIHRvIHRlbGwgdXMgYWJvdXQgdGhlbSE</string>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

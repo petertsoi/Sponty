@@ -25,6 +25,7 @@
         [detailView retain];
         [detailView setPlaceName:@"Fenton's Ice Cream"];
         [self.view addSubview:detailView];
+        //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
     }
     return self;
 }
@@ -51,6 +52,7 @@
     [UIView transitionFromView:detailView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
         [mapView roundCorners];
     }];
+    //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
 }
 
 - (IBAction)showNextPlace:(id)sender {
@@ -62,8 +64,6 @@
         [detailView release];
         detailView = newDetailView;
     }];
-    
-    
 }
 
 #pragma mark - View lifecycle
