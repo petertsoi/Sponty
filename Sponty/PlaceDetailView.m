@@ -35,6 +35,11 @@
 - (void) setPlaceName: (NSString* )name {
     [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PlacePageBG"]]];
     [titleBar setTitle:name];
+    
+    [self setFrame:CGRectMake(self.frame.origin.x+10, self.frame.origin.y, 
+                              self.frame.size.width-20, self.frame.size.height-20)];
+    self.layer.cornerRadius = 10.0f;
+    self.layer.masksToBounds = YES;
 }
 
 - (void) setFeatureImage:(UIImage *)featureImage {

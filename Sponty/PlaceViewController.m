@@ -12,14 +12,18 @@
 #import "PlaceDetailView.h"
 #import "PlaceMapView.h"
 
+#import "PlaceScrollerView.h"
+
 @implementation PlaceViewController
 
 @synthesize delegate = mDelegate;
+@synthesize pageControl = mPageControl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [self.view setBackgroundColor:[UIColor clearColor]];
         counter = 0;
         // Custom initialization
         detailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
@@ -31,7 +35,19 @@
         [detailView setWeatherSuggest:@"It's a gorgeous 68º now. Go enjoy a walk on the boardwalk."];
         [detailView setDistanceSuggest:@"Best of all, its only 0.2 miles away!"];
         
-        [self.view addSubview:detailView];
+        [(PlaceScrollerView* )self.view addToContents:detailView withController:self];
+        
+        nextPreloaded = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
+        
+        [nextPreloaded setPlaceName:@"Santa Cruz Scoop"];
+        //[newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
+        [nextPreloaded setPanoramaURL:@"http://photosynth.net/view.aspx?cid=fab244bc-86f9-413e-ad41-bed9fda5c701"];
+        [nextPreloaded setTimeSuggest:@"It's open for another 6 hours and 12 minutes."];
+        [nextPreloaded setWeatherSuggest:@"On a chilly day like this, hot fudge is the way to go."];
+        [nextPreloaded setDistanceSuggest:@"It's a walkable 0.1 miles away."];
+        [nextPreloaded retain];
+        
+        [(PlaceScrollerView* )self.view addToContents:nextPreloaded withController:self];
         //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
     }
     return self;
@@ -69,12 +85,7 @@
     
     switch (counter) {
         case 1:
-            [newDetailView setPlaceName:@"Santa Cruz Scoop"];
-            //[newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
-            [newDetailView setPanoramaURL:@"http://photosynth.net/view.aspx?cid=fab244bc-86f9-413e-ad41-bed9fda5c701"];
-            [newDetailView setTimeSuggest:@"It's open for another 6 hours and 12 minutes."];
-            [newDetailView setWeatherSuggest:@"On a chilly day like this, hot fudge is the way to go."];
-            [newDetailView setDistanceSuggest:@"It's a walkable 0.1 miles away."];
+            newDetailView = nextPreloaded;
             break;
 
         case 2:
@@ -106,8 +117,9 @@
             [newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
             break;
     }
+    [self.view insertSubview:newDetailView belowSubview:detailView];
     
-    [UIView transitionFromView:detailView toView:newDetailView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
+    [UIView transitionFromView:detailView toView:detailView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
         [detailView release];
         detailView = newDetailView;
     }];
