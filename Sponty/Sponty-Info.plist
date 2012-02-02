@@ -11,7 +11,7 @@
 	<key>CFBundleIconFiles</key>
 	<array/>
 	<key>CFBundleIdentifier</key>
-	<string>com.ptsoi.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.ptsoi.sponty</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -26,18 +26,18 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Santa Fe LET.ttf</string>
+		<string>nevis.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Santa Fe LET.ttf</string>
-		<string></string>
-	</array>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleBlackOpaque</string>
 </dict>
 </plist>

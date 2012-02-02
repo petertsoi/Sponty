@@ -12,12 +12,14 @@
 @class PlaceMapView;
 @class PlaceDetailView;
 @class PlaceScrollerView;
+@class PlaceListView;
 
-@interface PlaceViewController : UIViewController {
+@interface PlaceViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     ViewController * mDelegate;
     PlaceMapView * mapView;
     PlaceDetailView * detailView;
     PlaceDetailView * nextPreloaded;
+    PlaceListView * listView;
     
     IBOutlet UIPageControl * mPageControl;
     

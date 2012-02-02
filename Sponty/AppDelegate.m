@@ -26,17 +26,17 @@ typedef enum  {
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    SpontyRegistrationType registrationType = [defaults integerForKey:@"registrationType"];
+    /*SpontyRegistrationType registrationType = [defaults integerForKey:@"registrationType"];
     if (registrationType == SpontyRegistrationTypeNotRegistered) {
         UIViewController * registrationViewController = [[RegistrationSelectionViewController alloc] initWithNibName:@"RegistrationSelectionViewController" bundle:nil];
         [self.viewController presentModalViewController:registrationViewController animated:NO];
-    }
+    }*/
     
     return YES;
 }

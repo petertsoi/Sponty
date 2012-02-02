@@ -13,6 +13,9 @@
 #import "PlaceMapView.h"
 
 #import "PlaceScrollerView.h"
+#import "PlaceListView.h"
+#import "PlaceListViewCell.h"
+#import "PlaceListHeaderView.h"
 
 @implementation PlaceViewController
 
@@ -49,6 +52,9 @@
         
         [(PlaceScrollerView* )self.view addToContents:nextPreloaded withController:self];
         //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
+        
+        listView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceListView" owner:self options:nil] objectAtIndex:0];
+        [(PlaceScrollerView* )self.view addToContents:listView withController:self];
     }
     return self;
 }
@@ -63,8 +69,12 @@
 
 - (void) hideMapView {
     NSLog(@"Hide map");
+    [self.view setUserInteractionEnabled:NO];
+    [mapView setUserInteractionEnabled:NO];
+    [detailView setUserInteractionEnabled:NO];
     [UIView transitionFromView:mapView toView:detailView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
-        
+        [self.view setUserInteractionEnabled:YES];
+        [detailView setUserInteractionEnabled:YES];
     }];
     
 }
@@ -72,10 +82,54 @@
 - (IBAction)showMapView:(id)sender {
     mapView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0];
     mapView.delegate = self;
+    [self.view setUserInteractionEnabled:NO];
+    [detailView setUserInteractionEnabled:NO];
+    [mapView setUserInteractionEnabled:NO];
     [UIView transitionFromView:detailView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
         [mapView roundCorners];
+        [self.view setUserInteractionEnabled:YES];
+        [mapView setUserInteractionEnabled:YES];
     }];
     //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"PlaceCell";
+    
+    PlaceListViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"PlaceListViewCell" owner:self options:nil] objectAtIndex:0];
+    }
+    
+    cell.placeNameLabel.text = @"Fenton's Ice Cream";
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 5;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [NSString stringWithFormat:@"Section %i", section];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    PlaceListHeaderView *titleLabel = [[PlaceListHeaderView alloc] initWithFrame:CGRectMake(0, 0, 
+                                                                                            tableView.frame.size.width, 22)];
+    [titleLabel setFont:[UIFont fontWithName:@"nevis" size:14.0f]];
+    [titleLabel setBackgroundColor:[UIColor whiteColor]];
+    [titleLabel setTextColor:[UIColor colorWithRed:0.255 green:0.247 blue:0.224 alpha:1.0]];
+    [titleLabel setText:[self tableView:tableView titleForHeaderInSection:section]];
+    return (UILabel *)titleLabel;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
+    return 5;
 }
 
 - (IBAction)showNextPlace:(id)sender {
