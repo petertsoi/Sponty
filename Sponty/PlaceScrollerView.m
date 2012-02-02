@@ -35,52 +35,27 @@
 }
 
 - (void)scrollLeft:(id)selector{
-    [self setUserInteractionEnabled:NO];
-    [UIView beginAnimations:@"scrollLeft" context:NULL];
-    if (selector == self){
-        [UIView setAnimationDuration:0.25f];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-    } else {
-        [UIView setAnimationDuration:0.5f];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    }
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(scrollFinished)];
-    
-    currentSelection++;
-    /*
-    contents.frame = CGRectMake(0 - (currentSelection * self.frame.size.width), contents.frame.origin.y, 
-                                contents.frame.size.width, contents.frame.size.height);
-    */
-    int i = 0;
-    for (UIView *currentModule in modules) {
-        currentModule.frame = CGRectMake((self.frame.size.width - currentModule.frame.size.width)/2 + (i * self.frame.size.width) - (currentSelection * self.frame.size.width), currentModule.frame.origin.y, currentModule.frame.size.width, currentModule.frame.size.height);
-        ++i;
-    }
-    
-    [UIView commitAnimations];
+    [self scrollTo:++currentSelection];
 }
 
 - (void)scrollRight:(id)selector{
+    [self scrollTo:--currentSelection];
+}
+
+- (void) scrollTo:(int)target {
     [self setUserInteractionEnabled:NO];
     [UIView beginAnimations:@"scrollRight" context:NULL];
-    if (selector == self){
-        [UIView setAnimationDuration:0.25f];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-    } else {
-        [UIView setAnimationDuration:0.5f];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    }
+    [UIView setAnimationDuration:0.25f];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(scrollFinished)];
     
-    currentSelection--;
+    currentSelection = target;
     /*
-    contents.frame = CGRectMake(0 - (currentSelection * self.frame.size.width), contents.frame.origin.y, 
-                                contents.frame.size.width, contents.frame.size.height);
-    */
+     contents.frame = CGRectMake(0 - (currentSelection * self.frame.size.width), contents.frame.origin.y, 
+     contents.frame.size.width, contents.frame.size.height);
+     */
     int i = 0;
     for (UIView *currentModule in modules) {
         currentModule.frame = CGRectMake((self.frame.size.width - currentModule.frame.size.width)/2 + (i * self.frame.size.width) - (currentSelection * self.frame.size.width), currentModule.frame.origin.y, currentModule.frame.size.width, currentModule.frame.size.height);
@@ -107,7 +82,8 @@
 
 - (void)scrollFinished{
     UIPageControl * pager = delagate.pageControl;
-    [pager  setCurrentPage:currentSelection];
+    [pager setCurrentPage:currentSelection];
+    [delagate setCurrentViewToIndex:currentSelection];
     [self setUserInteractionEnabled:YES];
 }
 

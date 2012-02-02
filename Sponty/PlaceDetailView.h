@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+
 @class CustomNavBar;
+@class Place;
 
 @interface PlaceDetailView : UIView {
     IBOutlet CustomNavBar * titleBar;
     IBOutlet UIView *feature;
 	IBOutlet UIPageControl *pageControl;
+    Place * mData;
     
     IBOutlet UILabel * weatherSuggestion;
     IBOutlet UILabel * timeSuggestion;
@@ -24,12 +27,14 @@
 @property (nonatomic, retain) IBOutlet UILabel * weatherSuggestion; 
 @property (nonatomic, retain) IBOutlet UILabel * timeSuggestion; 
 @property (nonatomic, retain) IBOutlet UILabel * distanceSuggestion; 
+@property (nonatomic, readonly, retain) Place * place;
 
 - (void) setPanoramaURL: (NSString *) panoURL;
 - (void) setPlaceName: (NSString* )name;
-- (void) setFeatureImage:(UIImage *)featureImage;
+- (void) setFeatureImage:(NSString *)imgURL;
 - (void) setWeatherSuggest:(NSString *) suggestion;
 - (void) setDistanceSuggest:(NSString *) suggestion;
 - (void) setTimeSuggest:(NSString *) suggestion;
+- (void) setPlace:(Place *) data;
 
 @end

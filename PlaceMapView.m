@@ -14,20 +14,22 @@
 
 @synthesize delegate = mDelegate;
 
+- (void) setLatLong:(CLLocationCoordinate2D)loc {
+    //pacific st. 36.97177,-122.026584&fspn=0.00984,0.013497
+    //fentons 37.827819,-122.250345&fspn=0.011966,0.016007
+    
+    MKCoordinateRegion region = MKCoordinateRegionMake(loc, MKCoordinateSpanMake(0.00984,0.013497));
+    [mMapView setRegion:region animated:YES];
+    
+    MKPlacemark * dest = [[MKPlacemark alloc] initWithCoordinate:loc addressDictionary:nil];
+    
+    [mMapView addAnnotation:dest];
+
+}
+
 - (void) roundCorners {
     mMapView.layer.cornerRadius = 10.0;
     mMapView.layer.masksToBounds = YES;
-    CLLocationCoordinate2D zoomLocation;
-    //pacific st. 36.97177,-122.026584&fspn=0.00984,0.013497
-    //fentons 37.827819,-122.250345&fspn=0.011966,0.016007
-    zoomLocation.latitude = 36.97177;
-    zoomLocation.longitude = -122.026584;
-    MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, MKCoordinateSpanMake(0.00984,0.013497));
-    [mMapView setRegion:region animated:YES];
-    
-    MKPlacemark * dest = [[MKPlacemark alloc] initWithCoordinate:zoomLocation addressDictionary:nil];
-    
-    [mMapView addAnnotation:dest];
 }
 
 - (IBAction) hideMapView:(id)sender {

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlaceListTabButton : UIButton
+@interface PlaceListTabButton : UIButton {
+    bool active;
+}
+@property (nonatomic) bool active;
+
+- (void) setActive;
+- (void) setInactive;
+- (void) toggleActive;
 
 @end

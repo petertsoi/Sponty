@@ -24,5 +24,6 @@
     int currentSelection;
 }
 - (void) addToContents:(UIView *)view withController:(PlaceViewController *) ctrl;
+- (void) scrollTo:(int)target;
 
 @end

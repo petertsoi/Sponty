@@ -9,6 +9,9 @@
 #import "PlaceViewController.h"
 
 #import "ViewController.h"
+
+#import "Place.h"
+
 #import "PlaceDetailView.h"
 #import "PlaceMapView.h"
 
@@ -16,6 +19,8 @@
 #import "PlaceListView.h"
 #import "PlaceListViewCell.h"
 #import "PlaceListHeaderView.h"
+
+#import "PlaceLoader.h"
 
 @implementation PlaceViewController
 
@@ -26,37 +31,52 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        listFilter = -1; // ALL
+        indexOfListView = 0;
+        categories = [[NSMutableArray alloc] initWithObjects:@"Beer Me", @"Sit Back", @"Chill Out", nil];
+        loadedPlaces = [[NSMutableArray alloc] init];
         [self.view setBackgroundColor:[UIColor clearColor]];
-        counter = 0;
-        // Custom initialization
-        detailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
-        [detailView retain];
         
-        [detailView setPlaceName:@"Santa Cruz Boardwalk"];
-        [detailView setFeatureImage:[UIImage imageNamed:@"boardwalk"]];
-        [detailView setTimeSuggest:@"It's always open."];
-        [detailView setWeatherSuggest:@"It's a gorgeous 68º now. Go enjoy a walk on the boardwalk."];
-        [detailView setDistanceSuggest:@"Best of all, its only 0.2 miles away!"];
         
-        [(PlaceScrollerView* )self.view addToContents:detailView withController:self];
+        loader = [[PlaceLoader alloc] init];
+        places = [[loader getAllPlaces] mutableCopy];
         
-        nextPreloaded = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
+        NSMutableDictionary * placesDictTmp = [[NSMutableDictionary alloc] init];
+        for (NSString * category in categories) {
+            NSMutableArray * catList = [[NSMutableArray alloc] init];
+            for (Place * place in places ) {
+                if ([place.categories containsObject:category]) {
+                    [catList addObject:place];
+                }
+            }
+            [placesDictTmp setValue:catList forKey:category];
+            [catList release];
+        }
+        placeCategories = [[NSDictionary alloc] initWithDictionary:placesDictTmp];
+        [placesDictTmp release];
         
-        [nextPreloaded setPlaceName:@"Santa Cruz Scoop"];
-        //[newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
-        [nextPreloaded setPanoramaURL:@"http://photosynth.net/view.aspx?cid=fab244bc-86f9-413e-ad41-bed9fda5c701"];
-        [nextPreloaded setTimeSuggest:@"It's open for another 6 hours and 12 minutes."];
-        [nextPreloaded setWeatherSuggest:@"On a chilly day like this, hot fudge is the way to go."];
-        [nextPreloaded setDistanceSuggest:@"It's a walkable 0.1 miles away."];
-        [nextPreloaded retain];
-        
-        [(PlaceScrollerView* )self.view addToContents:nextPreloaded withController:self];
-        //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
+        for (Place * currentPlace in places) {
+            if (currentPlace.featured) {
+                [(PlaceScrollerView* )self.view addToContents:[currentPlace getViewWithController:self] withController:self];
+                [loadedPlaces addObject:currentPlace];
+                indexOfListView++;
+            }
+        }
         
         listView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceListView" owner:self options:nil] objectAtIndex:0];
+        for (NSString * newCategory in categories) {
+            [listView addTab:newCategory];
+        }
+        
         [(PlaceScrollerView* )self.view addToContents:listView withController:self];
+        [self setCurrentViewToIndex:0];
     }
     return self;
+}
+
+- (void)setCurrentViewToIndex:(int)index {
+    if (index < [places count])
+        currentView = [(Place * )[places objectAtIndex:index] view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,27 +88,38 @@
 }
 
 - (void) hideMapView {
-    NSLog(@"Hide map");
     [self.view setUserInteractionEnabled:NO];
-    [mapView setUserInteractionEnabled:NO];
-    [detailView setUserInteractionEnabled:NO];
-    [UIView transitionFromView:mapView toView:detailView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
+    //[mapView setUserInteractionEnabled:NO];
+    //[currentView setUserInteractionEnabled:NO];
+    [UIView transitionFromView:mapView toView:currentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
+        [mapView retain];
         [self.view setUserInteractionEnabled:YES];
-        [detailView setUserInteractionEnabled:YES];
+        
+        //[currentView setUserInteractionEnabled:YES];
     }];
     
 }
 
+- (void) switchToListFilter:(int)filter {
+    listFilter = filter -1;
+    [listView.tableView reloadData];
+}
+
 - (IBAction)showMapView:(id)sender {
-    mapView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0];
+    if (mapView && [mapView retainCount] > 0) {
+        [mapView release];
+    }
+    
+    mapView = [[[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0] retain];
     mapView.delegate = self;
-    [self.view setUserInteractionEnabled:NO];
-    [detailView setUserInteractionEnabled:NO];
-    [mapView setUserInteractionEnabled:NO];
-    [UIView transitionFromView:detailView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
+    //[self.view setUserInteractionEnabled:NO];
+    //[currentView setUserInteractionEnabled:NO];
+    //[mapView setUserInteractionEnabled:NO];
+    [UIView transitionFromView:currentView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
         [mapView roundCorners];
-        [self.view setUserInteractionEnabled:YES];
-        [mapView setUserInteractionEnabled:YES];
+        [mapView setLatLong:currentView.place.latLong];
+        //[self.view setUserInteractionEnabled:YES];
+        //[mapView setUserInteractionEnabled:YES];
     }];
     //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
 }
@@ -101,26 +132,66 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"PlaceListViewCell" owner:self options:nil] objectAtIndex:0];
     }
+
+    Place * thisPlace;
+    if (listFilter < 0) {
+        thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    } else {
+        thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:listFilter]] objectAtIndex:indexPath.row];
+    }
     
-    cell.placeNameLabel.text = @"Fenton's Ice Cream";
+    cell.placeNameLabel.text = thisPlace.name;
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%.1f miles away", [thisPlace.distanceAway doubleValue]];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Place * thisPlace;
+    if (listFilter < 0) {
+        thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    } else {
+        thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:listFilter]] objectAtIndex:indexPath.row];
+    }
+    
+    if ([loadedPlaces containsObject:thisPlace]){
+        int viewIndex = [loadedPlaces indexOfObject:thisPlace];
+        if (viewIndex >= indexOfListView)
+            viewIndex++;
+        [(PlaceScrollerView* )self.view scrollTo:viewIndex];
+    } else {
+        [(PlaceScrollerView* )self.view addToContents:[thisPlace getViewWithController:self] withController:self];
+        [loadedPlaces addObject:thisPlace];
+        int viewIndex = [loadedPlaces indexOfObject:thisPlace] + 1;
+        [(PlaceScrollerView* )self.view scrollTo:viewIndex];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    if (listFilter == -1)
+        return [categories count];
+    else
+        return 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [NSString stringWithFormat:@"Section %i", section];
+    if (section < [categories count]) {
+        if (listFilter == -1) {
+            return [categories objectAtIndex:section];
+        }  else {
+            return [categories objectAtIndex:listFilter];
+        }
+    } else {
+        return @"Other";
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    PlaceListHeaderView *titleLabel = [[PlaceListHeaderView alloc] initWithFrame:CGRectMake(0, 0, 
-                                                                                            tableView.frame.size.width, 22)];
+    PlaceListHeaderView *titleLabel = [[PlaceListHeaderView alloc] init];
     [titleLabel setFont:[UIFont fontWithName:@"nevis" size:14.0f]];
     [titleLabel setBackgroundColor:[UIColor whiteColor]];
     [titleLabel setTextColor:[UIColor colorWithRed:0.255 green:0.247 blue:0.224 alpha:1.0]];
@@ -129,9 +200,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-    return 5;
-}
+    if (listFilter < 0) 
+        return [[placeCategories objectForKey:[categories objectAtIndex:section]] count];
+    else
+        return [[placeCategories objectForKey:[categories objectAtIndex:listFilter]] count];
 
+}
+/*
 - (IBAction)showNextPlace:(id)sender {
     ++counter;
     PlaceDetailView * newDetailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
@@ -171,14 +246,14 @@
             [newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
             break;
     }
-    [self.view insertSubview:newDetailView belowSubview:detailView];
+    [self.view insertSubview:newDetailView belowSubview:currentView];
     
-    [UIView transitionFromView:detailView toView:detailView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
+    [UIView transitionFromView:detailView toView:currentView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
         [detailView release];
         detailView = newDetailView;
     }];
 }
-
+*/
 #pragma mark - View lifecycle
 
 /*

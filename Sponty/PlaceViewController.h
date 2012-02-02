@@ -13,23 +13,36 @@
 @class PlaceDetailView;
 @class PlaceScrollerView;
 @class PlaceListView;
+@class PlaceLoader;
 
 @interface PlaceViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     ViewController * mDelegate;
     PlaceMapView * mapView;
-    PlaceDetailView * detailView;
-    PlaceDetailView * nextPreloaded;
+    PlaceDetailView * currentView;
     PlaceListView * listView;
+    PlaceLoader * loader;
+    
+    NSDictionary * placeCategories;
+    
+    NSMutableArray * places;
+    NSMutableArray * categories;
+    
+    NSMutableArray * loadedPlaces;
+    
+    int listFilter;
+    int indexOfListView;
     
     IBOutlet UIPageControl * mPageControl;
-    
-    int counter; // temp for demo
 }
 @property (nonatomic, strong) ViewController * delegate;
 @property (nonatomic, strong) UIPageControl * pageControl;
 
 - (IBAction)showMapView:(id)sender;
 - (void)hideMapView;
-- (IBAction)showNextPlace:(id)sender;
+
+- (void)setCurrentViewToIndex:(int)index;
+
+- (void) switchToListFilter:(int)filter;
+//- (IBAction)showNextPlace:(id)sender;
 
 @end

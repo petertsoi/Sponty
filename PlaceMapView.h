@@ -20,5 +20,6 @@
 @property (nonatomic, retain) PlaceViewController * delegate;
 
 - (void) roundCorners;
+- (void) setLatLong:(CLLocationCoordinate2D)loc;
 
 @end

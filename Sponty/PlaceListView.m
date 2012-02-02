@@ -9,18 +9,48 @@
 #import "PlaceListView.h"
 #import "PlaceTableView.h"
 
+#import "PlaceListTabButton.h"
+#import "PlaceViewController.h"
+
 @implementation PlaceListView
 
-- (id)initWithFrame:(CGRect)frame
+@synthesize tableView;
+
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        //self.backgroundColor = ;
-        // Initialization code
-        //PlaceTableView * tableView = [[PlaceTableView alloc] initWithFrame:CGRectMake(40, 8, 273, 432)];
-        //[self addSubview:tableView];
+        currentTab = allTab;
+        tabs = [[NSMutableArray alloc] initWithObjects:allTab, nil];
     }
     return self;
+}
+
+- (void) addTab:(NSString *)title {
+    
+    PlaceListTabButton * lastTab = [tabs lastObject];
+    if (!lastTab) {
+        tabs = [[NSMutableArray alloc] initWithObjects:allTab, nil];
+        lastTab = [tabs lastObject];
+    }
+    PlaceListTabButton * newTab = [[PlaceListTabButton alloc] initWithFrame:lastTab.frame];
+    newTab.center = CGPointMake(lastTab.center.x, lastTab.center.y+65);
+    [newTab setTitle:title forState:UIControlStateNormal];
+    [tabs addObject:newTab];
+    [newTab addTarget:self action:@selector(tabPressed:) forControlEvents:UIControlEventTouchUpInside]; 
+    [self insertSubview:newTab aboveSubview:lastTab];
+}
+
+- (IBAction)tabPressed:(id)sender {
+    if (!currentTab) {
+        currentTab = allTab;
+    }
+    if (!((PlaceListTabButton*)sender).active) {
+        [currentTab toggleActive];
+        currentTab = sender;
+        [currentTab toggleActive];
+        [delegate switchToListFilter:[tabs indexOfObject:currentTab]];
+    }
 }
 
 /*

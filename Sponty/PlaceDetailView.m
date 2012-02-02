@@ -8,11 +8,13 @@
 
 #import "PlaceDetailView.h"
 
+#import "AsynchronousImageView.h"
 #import "CustomNavBar.h"
 
 @implementation PlaceDetailView
 
 @synthesize weatherSuggestion, distanceSuggestion, timeSuggestion;
+@synthesize place = mData;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -21,6 +23,10 @@
         
     }
     return self;
+}
+
+- (void) setPlace:(Place *) data {
+    mData = data;
 }
 
 - (void) setPanoramaURL: (NSString *) panoURL {
@@ -42,8 +48,10 @@
     self.layer.masksToBounds = YES;
 }
 
-- (void) setFeatureImage:(UIImage *)featureImage {
-    [feature setBackgroundColor:[UIColor colorWithPatternImage:featureImage]];
+- (void) setFeatureImage:(NSString *)imgURL {
+    AsynchronousImageView * newImage = [[AsynchronousImageView alloc] initWithFrame:feature.frame];
+    [newImage loadImageFromURLString:imgURL];
+    [feature addSubview:newImage];
 }
 
 - (void) setDistanceSuggest:(NSString *) suggestion{
