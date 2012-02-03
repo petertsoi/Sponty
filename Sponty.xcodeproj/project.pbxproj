@@ -143,6 +143,11 @@
 		0ADD36191488CA380070D2E4 /* pacific@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD36171488CA380070D2E4 /* pacific@2x.png */; };
 		0AEDE98114DAF84000418AE5 /* PlaceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDE98014DAF84000418AE5 /* PlaceLoader.m */; };
 		0AEDE98514DAF8C000418AE5 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDE98414DAF8C000418AE5 /* Place.m */; };
+		0AF8931C14DBD5BC00ED7F9F /* getDirectionsBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8931A14DBD5BC00ED7F9F /* getDirectionsBtn.png */; };
+		0AF8931D14DBD5BC00ED7F9F /* getDirectionsBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8931B14DBD5BC00ED7F9F /* getDirectionsBtn@2x.png */; };
+		0AF8932114DBD99900ED7F9F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF8931F14DBD98C00ED7F9F /* CoreLocation.framework */; };
+		0AF8932414DBDBAA00ED7F9F /* beenHereBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8932214DBDBAA00ED7F9F /* beenHereBtn.png */; };
+		0AF8932514DBDBAA00ED7F9F /* beenHereBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8932314DBDBAA00ED7F9F /* beenHereBtn@2x.png */; };
 		0AFD656014837D6500537619 /* Santa Fe LET.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD655F14837D6500537619 /* Santa Fe LET.ttf */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +260,11 @@
 		0AEDE98014DAF84000418AE5 /* PlaceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceLoader.m; sourceTree = "<group>"; };
 		0AEDE98314DAF8C000418AE5 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		0AEDE98414DAF8C000418AE5 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		0AF8931A14DBD5BC00ED7F9F /* getDirectionsBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = getDirectionsBtn.png; path = png/getDirectionsBtn.png; sourceTree = "<group>"; };
+		0AF8931B14DBD5BC00ED7F9F /* getDirectionsBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "getDirectionsBtn@2x.png"; path = "png/getDirectionsBtn@2x.png"; sourceTree = "<group>"; };
+		0AF8931F14DBD98C00ED7F9F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0AF8932214DBDBAA00ED7F9F /* beenHereBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beenHereBtn.png; path = png/beenHereBtn.png; sourceTree = "<group>"; };
+		0AF8932314DBDBAA00ED7F9F /* beenHereBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "beenHereBtn@2x.png"; path = "png/beenHereBtn@2x.png"; sourceTree = "<group>"; };
 		0AFD655F14837D6500537619 /* Santa Fe LET.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Santa Fe LET.ttf"; path = "Sponty/Santa Fe LET.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,6 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF8932114DBD99900ED7F9F /* CoreLocation.framework in Frameworks */,
 				0A425C0414A986A100A34E01 /* QuartzCore.framework in Frameworks */,
 				0AB6590014845C8200716B6E /* MapKit.framework in Frameworks */,
 				0A7C254414836C11003DA519 /* UIKit.framework in Frameworks */,
@@ -308,6 +319,7 @@
 		0A7C254214836C11003DA519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AF8931F14DBD98C00ED7F9F /* CoreLocation.framework */,
 				0A425C0314A986A100A34E01 /* QuartzCore.framework */,
 				0A7C254314836C11003DA519 /* UIKit.framework */,
 				0A7C254514836C11003DA519 /* Foundation.framework */,
@@ -386,6 +398,8 @@
 			children = (
 				0AD97E8B14DA6E29002B86F5 /* nevis.ttf */,
 				0ADD36081488C6590070D2E4 /* attractions */,
+				0AF8932214DBDBAA00ED7F9F /* beenHereBtn.png */,
+				0AF8932314DBDBAA00ED7F9F /* beenHereBtn@2x.png */,
 				0A4DD14E148890C600B8D329 /* bespontaneous_btn.png */,
 				0A4DD14F148890C600B8D329 /* bespontaneous_btn@2x.png */,
 				0A4DD150148890C600B8D329 /* bgpattern.png */,
@@ -400,6 +414,8 @@
 				0A425BF814A97BBC00A34E01 /* fblogin@2x.png */,
 				0AB65909148463D800716B6E /* FeedbackButton.png */,
 				0AB6590A148463D800716B6E /* FeedbackButton@2x.png */,
+				0AF8931A14DBD5BC00ED7F9F /* getDirectionsBtn.png */,
+				0AF8931B14DBD5BC00ED7F9F /* getDirectionsBtn@2x.png */,
 				0AB659051484629D00716B6E /* NotMe.png */,
 				0AB659061484629D00716B6E /* NotMe@2x.png */,
 				0AB659011484622B00716B6E /* ShowButton.png */,
@@ -578,6 +594,10 @@
 				0A6E6F9D14DA893400FE0DDD /* listTabActive@2x.png in Resources */,
 				0A6E6F9E14DA893400FE0DDD /* listTabInactive.png in Resources */,
 				0A6E6F9F14DA893400FE0DDD /* listTabInactive@2x.png in Resources */,
+				0AF8931C14DBD5BC00ED7F9F /* getDirectionsBtn.png in Resources */,
+				0AF8931D14DBD5BC00ED7F9F /* getDirectionsBtn@2x.png in Resources */,
+				0AF8932414DBDBAA00ED7F9F /* beenHereBtn.png in Resources */,
+				0AF8932514DBDBAA00ED7F9F /* beenHereBtn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

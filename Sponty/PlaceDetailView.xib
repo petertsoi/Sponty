@@ -58,9 +58,10 @@
 					<object class="IBUIButton" id="664153552">
 						<reference key="NSNextResponder" ref="463400809"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{180, 393}, {115, 43}}</string>
+						<string key="NSFrame">{{14, 393}, {121, 39}}</string>
 						<reference key="NSSuperview" ref="463400809"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="218103447"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -81,7 +82,7 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">BookmarkItBtn@2x.png</string>
+							<string key="NSResourceName">beenHereBtn.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="973860635">
 							<int key="type">2</int>
@@ -96,10 +97,10 @@
 					<object class="IBUIButton" id="218103447">
 						<reference key="NSNextResponder" ref="463400809"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{3, 393}, {162, 42}}</string>
+						<string key="NSFrame">{{144, 393}, {139, 40}}</string>
 						<reference key="NSSuperview" ref="463400809"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="664153552"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -125,6 +126,7 @@
 						<string key="NSFrameSize">{320, 172}</string>
 						<reference key="NSSuperview" ref="463400809"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="75558307"/>
 						<string key="NSReuseIdentifierKey">_NS:196</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -207,7 +209,7 @@
 						<string key="NSFrame">{{63, 346}, {221, 38}}</string>
 						<reference key="NSSuperview" ref="463400809"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="218103447"/>
+						<reference key="NSNextKeyView" ref="664153552"/>
 						<string key="NSReuseIdentifierKey">_NS:328</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -486,8 +488,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="BookmarkItBtn@2x.png">{214, 79}</string>
-			<string key="ShowButton.png">{163, 44}</string>
+			<string key="ShowButton.png">{139, 40}</string>
+			<string key="beenHereBtn.png">{121, 39}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
