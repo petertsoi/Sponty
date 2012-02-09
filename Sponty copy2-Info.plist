@@ -23,7 +23,7 @@
 				<string>Icon@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -39,7 +39,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>5hc</string>
 	<key>LSRequiresIPhoneOS</key>
 	<false/>
 	<key>UIAppFonts</key>
@@ -47,6 +47,8 @@
 		<string>Santa Fe LET.ttf</string>
 		<string>nevis.ttf</string>
 	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array/>
 	<key>UIStatusBarStyle</key>

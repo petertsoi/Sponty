@@ -115,12 +115,13 @@
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = (UITouch *)[[touches allObjects] objectAtIndex:0];
     CGPoint location = [touch locationInView:self];
-    if (location.x - touchStartLocation.x < -100 && currentSelection + 1 < numberLoaded) {
+    if (location.x - touchStartLocation.x < -100) {
         [self scrollLeft:self];
-    } else if (location.x - touchStartLocation.x > 100 && currentSelection > 0){
-        [self scrollRight:self];
-    } else if (currentSelection == 0) {
-        [delagate.navigationController popViewControllerAnimated:YES];
+    } else if (location.x - touchStartLocation.x > 100){
+        if (currentSelection == 0)
+            [delagate.navigationController popViewControllerAnimated:YES];
+        else if (currentSelection > 0) 
+            [self scrollRight:self];
     } else {
         [self snapMiddle];
     }

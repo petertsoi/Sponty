@@ -38,7 +38,7 @@
     } else if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onDate"]) {
         who = @"date";
     }
-    //coord = CLLocationCoordinate2DMake(37.785834,-122.406417);
+    //coord = CLLocationCoordinate2DMake(37.785834,-122.406417); Hardcoded SF location
     NSString * query = [NSString stringWithFormat:@"http://sponty.palash.me:8004/recommend?time=%0.f&location=%f,%f&who=%@", [[NSDate date] timeIntervalSince1970], coord.latitude, coord.longitude, who];
     NSLog(@"%@", query);
     NSURL  *url = [NSURL URLWithString:query];
@@ -51,18 +51,12 @@
     NSMutableArray * toReturn = [[NSMutableArray alloc] init];
     
     for (NSDictionary * newPlace in places) {
-        //NSLog(@"Name: %@", [newPlace objectForKey:@"name"]);
-        //NSLog(@"Location: %f, %f", [[[newPlace objectForKey:@"location"] objectAtIndex:0] floatValue], [[[newPlace objectForKey:@"location"] objectAtIndex:1] floatValue]);
         NSDictionary * tips = [newPlace objectForKey:@"tips"];
         
         NSString *featuredString = @"NO";
         if ([[newPlace objectForKey:@"featured"] boolValue]) {
             featuredString = @"YES";
         }
-        
-        //NSLog(@"Activity: %@", [tips objectForKey:@"activity"]);
-        //NSLog(@"Popularity: %@", [tips objectForKey:@"popularity"]);
-        //NSLog(@"Distance: %@", [tips objectForKey:@"distance"]);
         NSDictionary * formattedDict = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [newPlace objectForKey:@"name"], @"name",
                                         [[newPlace objectForKey:@"location"] objectAtIndex:0], @"long",

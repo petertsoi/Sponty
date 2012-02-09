@@ -366,7 +366,7 @@
 		0AAB937314E3978100DDE13B /* partyCategory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "partyCategory@2x.png"; path = "png/partyCategory@2x.png"; sourceTree = "<group>"; };
 		0AAB937414E3978100DDE13B /* relaxCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = relaxCategory.png; path = png/relaxCategory.png; sourceTree = "<group>"; };
 		0AAB937514E3978100DDE13B /* relaxCategory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "relaxCategory@2x.png"; path = "png/relaxCategory@2x.png"; sourceTree = "<group>"; };
-		0AAB93F014E3A09900DDE13B /* Sponty copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Sponty copy.app"; path = Sponty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAB93F014E3A09900DDE13B /* Sponty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sponty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAB93F214E3A09A00DDE13B /* Sponty copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Sponty copy2-Info.plist"; path = "/Users/petertsoi/Documents/work/Apps/Sponty/Sponty copy2-Info.plist"; sourceTree = "<absolute>"; };
 		0AB043A914B7E1D000663903 /* PlaceScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceScrollerView.h; sourceTree = "<group>"; };
 		0AB043AA14B7E1D000663903 /* PlaceScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceScrollerView.m; sourceTree = "<group>"; };
@@ -475,7 +475,7 @@
 			children = (
 				0A7C253F14836C11003DA519 /* Sponty.app */,
 				0A836D0F1489A22900E1D64D /* Sponty Mocap.app */,
-				0AAB93F014E3A09900DDE13B /* Sponty copy.app */,
+				0AAB93F014E3A09900DDE13B /* Sponty.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -724,7 +724,7 @@
 			);
 			name = Spontyapp;
 			productName = Sponty;
-			productReference = 0AAB93F014E3A09900DDE13B /* Sponty copy.app */;
+			productReference = 0AAB93F014E3A09900DDE13B /* Sponty.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1088,8 +1088,8 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Suman Venkataswamy";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Suman Venkataswamy";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1104,8 +1104,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "158A36C6-CEAD-4B66-8938-AF8CDDE19178";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "158A36C6-CEAD-4B66-8938-AF8CDDE19178";
+				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1119,8 +1119,8 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Suman Venkataswamy";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Suman Venkataswamy";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1129,8 +1129,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "158A36C6-CEAD-4B66-8938-AF8CDDE19178";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "158A36C6-CEAD-4B66-8938-AF8CDDE19178";
+				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
