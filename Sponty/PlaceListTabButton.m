@@ -33,6 +33,12 @@
     return self;
 }
 
+- (void)setTitle:(NSString *)title forState:(UIControlState)state {
+    if (title != @"All") {
+        [self setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@Category.png", title]] forState:UIControlStateNormal];
+    }
+}
+
 - (void) setActive {
     [self setBackgroundImage:[UIImage imageNamed:@"listTabActive.png"] forState:UIControlStateNormal];
     active = YES;

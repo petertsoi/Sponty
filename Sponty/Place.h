@@ -40,6 +40,6 @@
 - (id) initWithDictionary:(NSDictionary *) data;
 - (PlaceDetailView *) getViewWithController:(UIViewController *)controller;
 
-@property (nonatomic,retain) PlaceDetailView * view;
+@property (nonatomic, retain) PlaceDetailView * view;
 
 @end

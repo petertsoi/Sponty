@@ -27,7 +27,6 @@
 @property (nonatomic) CLLocationCoordinate2D myLocation;
 @property (nonatomic, retain) CLLocationManager * locationManager;
 
-- (CLLocationCoordinate2D) getLocation;
 - (IBAction) startButtonPressed:(id) sender; 
 - (IBAction) showSettings:(id) sender;
 - (void) finishedEditingSettings;

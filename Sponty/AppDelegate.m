@@ -21,6 +21,7 @@ typedef enum  {
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -29,7 +30,9 @@ typedef enum  {
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    [navigationController setNavigationBarHidden:YES];
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
     /*SpontyRegistrationType registrationType = [defaults integerForKey:@"registrationType"];

@@ -46,7 +46,7 @@
 - (PlaceDetailView *) getViewWithController:(UIViewController *)controller {
     delegate = controller;
     if (!mView) {
-    PlaceDetailView * view = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:controller options:nil] objectAtIndex:0];
+    PlaceDetailView * view = [[[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:controller options:nil] objectAtIndex:0] retain];
     
         [view setPlace:self];
     [view setPlaceName:name];

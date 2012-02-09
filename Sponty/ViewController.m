@@ -37,18 +37,10 @@
 	NSLog(@"Error: %@", [error description]);
 }
 
-- (CLLocationCoordinate2D) getLocation {
-    return myLocation;
-}
-
 #pragma mark - View lifecycle
 
 - (IBAction) startButtonPressed:(id) sender {
     placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle] withController:self];
-    [self.view setBackgroundColor:[UIColor blackColor]];
-    for (int i = 0; i <= [[self.view subviews] count]; ++i) {
-        [[[self.view subviews] objectAtIndex:0] removeFromSuperview];
-    }
     [self switchedToNewPlace:placeVC];
 }
 
@@ -59,21 +51,37 @@
 }
 
 - (IBAction) selectedFriends:(id)sender {
-    [friendsCheckbox setChecked:YES];
-    [dateCheckbox setChecked:NO];
+    if (!friendsCheckbox.checked) {
+        [friendsCheckbox setChecked:YES];
+        [dateCheckbox setChecked:NO];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"withFriends"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"onDate"];
+    } else {
+        [friendsCheckbox setChecked:NO];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"withFriends"];
+    }
+    
 }
 
 - (IBAction) selectedDate:(id)sender {
-    [friendsCheckbox setChecked:NO];
-    [dateCheckbox setChecked:YES];
+    if (!dateCheckbox.checked) {
+        [friendsCheckbox setChecked:NO];
+        [dateCheckbox setChecked:YES];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"withFriends"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"onDate"];
+    } else {
+        [dateCheckbox setChecked:NO];
+         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"onDate"];
+    }
+    
 }
 
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace {
     placeVC = newPlace;
     placeVC.delegate = self;
     //self.view = newPlace.view;
-    [self.view insertSubview:newPlace.view atIndex:[[self.view subviews] count] -1];
-    
+    //[self.view insertSubview:newPlace.view atIndex:[[self.view subviews] count] -1];
+    [self.navigationController pushViewController:newPlace animated:YES];
     
 }
 
@@ -98,8 +106,7 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bgpattern"]]];
     [self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
     
-    [friendsCheckbox setChecked:YES];
-    [dateCheckbox setChecked:NO];
+    [self selectedFriends:nil];
     
     self.locationManager = [[[CLLocationManager alloc] init] autorelease];
     self.locationManager.delegate = self; // send loc updates to myself

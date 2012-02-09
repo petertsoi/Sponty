@@ -46,6 +46,7 @@
 
 - (void) scrollTo:(int)target {
     [self setUserInteractionEnabled:NO];
+    [self setBackgroundColor:[UIColor blackColor]];
     [UIView beginAnimations:@"scrollRight" context:NULL];
     [UIView setAnimationDuration:0.25f];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
@@ -118,9 +119,15 @@
         [self scrollLeft:self];
     } else if (location.x - touchStartLocation.x > 100 && currentSelection > 0){
         [self scrollRight:self];
+    } else if (currentSelection == 0) {
+        [delagate.navigationController popViewControllerAnimated:YES];
     } else {
         [self snapMiddle];
     }
+}
+
+- (void) drawRect:(CGRect)rect {
+    [self setBackgroundColor:[UIColor blackColor]];
 }
 
 - (void) addToContents:(UIView *)view withController:(PlaceViewController *) ctrl {
@@ -138,7 +145,6 @@
     [remove.view removeFromSuperview];
     [modules removeObject:remove.view];
     remove.view = nil;
-    [remove.view release];
     numberLoaded--;
     [delagate.pageControl setNumberOfPages:numberLoaded];
 }
