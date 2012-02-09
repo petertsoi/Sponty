@@ -37,10 +37,14 @@
 	NSLog(@"Error: %@", [error description]);
 }
 
+- (CLLocationCoordinate2D) getLocation {
+    return myLocation;
+}
+
 #pragma mark - View lifecycle
 
 - (IBAction) startButtonPressed:(id) sender {
-    placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle]];
+    placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle] withController:self];
     [self.view setBackgroundColor:[UIColor blackColor]];
     for (int i = 0; i <= [[self.view subviews] count]; ++i) {
         [[[self.view subviews] objectAtIndex:0] removeFromSuperview];

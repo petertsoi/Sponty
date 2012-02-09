@@ -40,7 +40,7 @@
 
 - (IBAction)showMapView:(id)sender;
 - (void)hideMapView;
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withController:(ViewController *)controller;
 - (void)setCurrentViewToIndex:(int)index;
 
 - (void) switchToListFilter:(int)filter;

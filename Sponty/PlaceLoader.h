@@ -9,9 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @class PlaceDetailView;
+@class PlaceViewController;
 @class Place;
 
-@interface PlaceLoader : NSObject
+@interface PlaceLoader : NSObject {
+    PlaceViewController * mDelegate;
+}
+
+- (id) initWithController:(PlaceViewController * )control;
 
 - (Place *) getNextPlace;
 - (NSArray *) getAllPlaces;

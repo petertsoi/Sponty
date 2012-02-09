@@ -27,18 +27,19 @@
 @synthesize delegate = mDelegate;
 @synthesize pageControl = mPageControl;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withController:(ViewController *)controller
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        mDelegate = controller;
         listFilter = -1; // ALL
         indexOfListView = 0;
-        categories = [[NSMutableArray alloc] initWithObjects:@"Beer Me", @"Sit Back", @"Chill Out", nil];
+        categories = [[NSMutableArray alloc] initWithObjects:@"party", @"relax", @"eat", @"active", nil];
         loadedPlaces = [[NSMutableArray alloc] init];
         [self.view setBackgroundColor:[UIColor clearColor]];
         
         
-        loader = [[PlaceLoader alloc] init];
+        loader = [[PlaceLoader alloc] initWithController:self];
         places = [[loader getAllPlaces] mutableCopy];
         
         NSMutableDictionary * placesDictTmp = [[NSMutableDictionary alloc] init];
@@ -75,8 +76,10 @@
 }
 
 - (void)setCurrentViewToIndex:(int)index {
-    if (index < [places count])
-        currentView = [(Place * )[places objectAtIndex:index] view];
+    if (index < [loadedPlaces count]) {
+        currentView = [(Place * )[loadedPlaces objectAtIndex:index] view];
+        //NSLog(@"Place: %@", ((Place * )[loadedPlaces objectAtIndex:index]).name);
+    }
     while (index == indexOfListView && [loadedPlaces count] > indexOfListView) {
         Place * removed = [loadedPlaces lastObject];
         [loadedPlaces removeObject:removed];
