@@ -62,7 +62,7 @@
                 indexOfListView++;
             }
         }
-        
+        featuredCount = indexOfListView;
         listView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceListView" owner:self options:nil] objectAtIndex:0];
         for (NSString * newCategory in categories) {
             [listView addTab:newCategory];
@@ -77,6 +77,11 @@
 - (void)setCurrentViewToIndex:(int)index {
     if (index < [places count])
         currentView = [(Place * )[places objectAtIndex:index] view];
+    while (index == indexOfListView && [loadedPlaces count] > indexOfListView) {
+        Place * removed = [loadedPlaces lastObject];
+        [loadedPlaces removeObject:removed];
+        [(PlaceScrollerView* )self.view removeFromContents:removed];
+    }
 }
 
 - (void)didReceiveMemoryWarning

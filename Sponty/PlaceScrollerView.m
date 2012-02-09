@@ -8,6 +8,8 @@
 
 #import "PlaceScrollerView.h"
 
+#import "Place.h"
+#import "PlaceDetailView.h"
 #import "PlaceViewController.h"
 
 @implementation PlaceScrollerView
@@ -83,8 +85,8 @@
 - (void)scrollFinished{
     UIPageControl * pager = delagate.pageControl;
     [pager setCurrentPage:currentSelection];
-    [delagate setCurrentViewToIndex:currentSelection];
     [self setUserInteractionEnabled:YES];
+    [delagate setCurrentViewToIndex:currentSelection];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -114,7 +116,7 @@
     CGPoint location = [touch locationInView:self];
     if (location.x - touchStartLocation.x < -100 && currentSelection + 1 < numberLoaded) {
         [self scrollLeft:self];
-    } else if (location.y - touchStartLocation.x > 100 && currentSelection > 0){
+    } else if (location.x - touchStartLocation.x > 100 && currentSelection > 0){
         [self scrollRight:self];
     } else {
         [self snapMiddle];
@@ -132,13 +134,13 @@
     [delagate.pageControl setNumberOfPages:numberLoaded];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+- (void) removeFromContents:(Place *)remove {
+    [remove.view removeFromSuperview];
+    [modules removeObject:remove.view];
+    remove.view = nil;
+    [remove.view release];
+    numberLoaded--;
+    [delagate.pageControl setNumberOfPages:numberLoaded];
 }
-*/
 
 @end

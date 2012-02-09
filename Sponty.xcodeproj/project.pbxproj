@@ -149,6 +149,11 @@
 		0AF8932414DBDBAA00ED7F9F /* beenHereBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8932214DBDBAA00ED7F9F /* beenHereBtn.png */; };
 		0AF8932514DBDBAA00ED7F9F /* beenHereBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8932314DBDBAA00ED7F9F /* beenHereBtn@2x.png */; };
 		0AFD656014837D6500537619 /* Santa Fe LET.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD655F14837D6500537619 /* Santa Fe LET.ttf */; };
+		0AFFFAF014E33CC90096F788 /* Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFFAEF14E33CC90096F788 /* Checkbox.m */; };
+		0AFFFAF514E33E610096F788 /* CheckboxChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AFFFAF114E33E610096F788 /* CheckboxChecked.png */; };
+		0AFFFAF614E33E610096F788 /* CheckboxChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AFFFAF214E33E610096F788 /* CheckboxChecked@2x.png */; };
+		0AFFFAF714E33E610096F788 /* CheckboxUnchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AFFFAF314E33E610096F788 /* CheckboxUnchecked.png */; };
+		0AFFFAF814E33E610096F788 /* CheckboxUnchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AFFFAF414E33E610096F788 /* CheckboxUnchecked@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -266,6 +271,12 @@
 		0AF8932214DBDBAA00ED7F9F /* beenHereBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beenHereBtn.png; path = png/beenHereBtn.png; sourceTree = "<group>"; };
 		0AF8932314DBDBAA00ED7F9F /* beenHereBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "beenHereBtn@2x.png"; path = "png/beenHereBtn@2x.png"; sourceTree = "<group>"; };
 		0AFD655F14837D6500537619 /* Santa Fe LET.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Santa Fe LET.ttf"; path = "Sponty/Santa Fe LET.ttf"; sourceTree = "<group>"; };
+		0AFFFAEE14E33CC90096F788 /* Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkbox.h; sourceTree = "<group>"; };
+		0AFFFAEF14E33CC90096F788 /* Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkbox.m; sourceTree = "<group>"; };
+		0AFFFAF114E33E610096F788 /* CheckboxChecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckboxChecked.png; path = png/CheckboxChecked.png; sourceTree = "<group>"; };
+		0AFFFAF214E33E610096F788 /* CheckboxChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckboxChecked@2x.png"; path = "png/CheckboxChecked@2x.png"; sourceTree = "<group>"; };
+		0AFFFAF314E33E610096F788 /* CheckboxUnchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckboxUnchecked.png; path = png/CheckboxUnchecked.png; sourceTree = "<group>"; };
+		0AFFFAF414E33E610096F788 /* CheckboxUnchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckboxUnchecked@2x.png"; path = "png/CheckboxUnchecked@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +346,8 @@
 				0A237A6C14DB4E25005536C9 /* AsynchronousImageView.m */,
 				0A7C255214836C11003DA519 /* AppDelegate.h */,
 				0A7C255314836C11003DA519 /* AppDelegate.m */,
+				0AFFFAEE14E33CC90096F788 /* Checkbox.h */,
+				0AFFFAEF14E33CC90096F788 /* Checkbox.m */,
 				0A7C2563148374DC003DA519 /* CustomNavBar.h */,
 				0A7C2564148374DC003DA519 /* CustomNavBar.m */,
 				0A7C255514836C11003DA519 /* ViewController.h */,
@@ -406,6 +419,10 @@
 				0A4DD151148890C600B8D329 /* bgpattern@2x.png */,
 				0AB98A2D14D3569700DB2448 /* BookmarkItBtn.png */,
 				0AB98A2E14D3569700DB2448 /* BookmarkItBtn@2x.png */,
+				0AFFFAF114E33E610096F788 /* CheckboxChecked.png */,
+				0AFFFAF214E33E610096F788 /* CheckboxChecked@2x.png */,
+				0AFFFAF314E33E610096F788 /* CheckboxUnchecked.png */,
+				0AFFFAF414E33E610096F788 /* CheckboxUnchecked@2x.png */,
 				0A4DD152148890C600B8D329 /* gear.png */,
 				0A4DD153148890C600B8D329 /* gear@2x.png */,
 				0A4DD154148890C600B8D329 /* mocaptrackscreen@2x.png */,
@@ -598,6 +615,10 @@
 				0AF8931D14DBD5BC00ED7F9F /* getDirectionsBtn@2x.png in Resources */,
 				0AF8932414DBDBAA00ED7F9F /* beenHereBtn.png in Resources */,
 				0AF8932514DBDBAA00ED7F9F /* beenHereBtn@2x.png in Resources */,
+				0AFFFAF514E33E610096F788 /* CheckboxChecked.png in Resources */,
+				0AFFFAF614E33E610096F788 /* CheckboxChecked@2x.png in Resources */,
+				0AFFFAF714E33E610096F788 /* CheckboxUnchecked.png in Resources */,
+				0AFFFAF814E33E610096F788 /* CheckboxUnchecked@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +694,7 @@
 				0AEDE98114DAF84000418AE5 /* PlaceLoader.m in Sources */,
 				0AEDE98514DAF8C000418AE5 /* Place.m in Sources */,
 				0A237A6D14DB4E25005536C9 /* AsynchronousImageView.m in Sources */,
+				0AFFFAF014E33CC90096F788 /* Checkbox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,8 +761,8 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Peter Tsoi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Peter Tsoi";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -755,7 +777,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
+				PROVISIONING_PROFILE = "74FD272F-55B4-4850-8B19-7BE72F91A71F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74FD272F-55B4-4850-8B19-7BE72F91A71F";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -769,8 +792,8 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Peter Tsoi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Peter Tsoi";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -779,7 +802,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
+				PROVISIONING_PROFILE = "74FD272F-55B4-4850-8B19-7BE72F91A71F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74FD272F-55B4-4850-8B19-7BE72F91A71F";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

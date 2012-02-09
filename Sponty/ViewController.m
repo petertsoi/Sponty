@@ -11,14 +11,30 @@
 #import "PlaceViewController.h"
 #import "SettingsViewController.h"
 
+#import "Checkbox.h"
+
 #import "MocapOverlayView.h"
 
 @implementation ViewController
+
+@synthesize myLocation, locationManager;
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+    myLocation = newLocation.coordinate;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+	NSLog(@"Error: %@", [error description]);
 }
 
 #pragma mark - View lifecycle
@@ -36,6 +52,16 @@
     SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:[NSBundle mainBundle]];
     settingsVC.delegate = self;
     [self presentModalViewController:settingsVC animated:YES];
+}
+
+- (IBAction) selectedFriends:(id)sender {
+    [friendsCheckbox setChecked:YES];
+    [dateCheckbox setChecked:NO];
+}
+
+- (IBAction) selectedDate:(id)sender {
+    [friendsCheckbox setChecked:NO];
+    [dateCheckbox setChecked:YES];
 }
 
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace {
@@ -67,6 +93,13 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bgpattern"]]];
     [self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
+    
+    [friendsCheckbox setChecked:YES];
+    [dateCheckbox setChecked:NO];
+    
+    self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+    self.locationManager.delegate = self; // send loc updates to myself
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)viewDidUnload
@@ -98,6 +131,11 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void) dealloc { 
+    [locationManager release];
+    [super dealloc];
 }
 
 @end

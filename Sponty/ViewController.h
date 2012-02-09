@@ -8,12 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@class PlaceViewController;
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController {
+@class PlaceViewController;
+@class Checkbox;
+
+@interface ViewController : UIViewController <CLLocationManagerDelegate> {
     IBOutlet UIButton * startButton;
+    IBOutlet Checkbox * friendsCheckbox;
+    IBOutlet Checkbox * dateCheckbox;
     PlaceViewController * placeVC;
+    
+    CLLocationManager * locationManager;
+    CLLocationCoordinate2D myLocation;
 }
+
+@property (nonatomic) CLLocationCoordinate2D myLocation;
+@property (nonatomic, retain) CLLocationManager * locationManager;
 
 - (IBAction) startButtonPressed:(id) sender; 
 - (IBAction) showSettings:(id) sender;
@@ -21,5 +33,8 @@
 - (PlaceViewController *) getNextPlace;
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace;
 - (void) showNextPlace;
+
+- (IBAction) selectedFriends:(id)sender;
+- (IBAction) selectedDate:(id)sender;
 
 @end

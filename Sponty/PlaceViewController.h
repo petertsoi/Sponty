@@ -31,6 +31,7 @@
     
     int listFilter;
     int indexOfListView;
+    int featuredCount;
     
     IBOutlet UIPageControl * mPageControl;
 }

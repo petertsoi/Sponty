@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class  PlaceViewController;
+@class PlaceViewController;
+@class Place;
 
 @interface PlaceScrollerView : UIView {
     PlaceViewController * delagate;
@@ -24,6 +25,7 @@
     int currentSelection;
 }
 - (void) addToContents:(UIView *)view withController:(PlaceViewController *) ctrl;
+- (void) removeFromContents:(Place *)remove;
 - (void) scrollTo:(int)target;
 
 @end
