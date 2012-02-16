@@ -58,10 +58,9 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)theConnection{
     isLoaded = YES;
     UIImage * download =  [self p_imageByScalingImage:[UIImage imageWithData:data] toSize:self.frame.size];
+
     self.image = download;
     [spinner stopAnimating];
-    [spinner release];
-    spinner = nil;
     [data release];
     data = nil; 
     [connection release];
@@ -80,7 +79,6 @@
         targetWidth = targetSize.width;
         targetHeight = targetSize.height;
     }
-    
     CGImageRef imageRef = [sourceImage CGImage];
     if (YES) { // CROP STUFF
         float targetAspect = targetSize.width / targetSize.height;
@@ -95,18 +93,18 @@
     }
     CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(imageRef);
     CGColorSpaceRef colorSpaceInfo = CGImageGetColorSpace(imageRef);
-    
+
     if (bitmapInfo == kCGImageAlphaNone) {
         bitmapInfo = kCGImageAlphaNoneSkipLast;
     }
     
     CGContextRef bitmap;
-    
     if (sourceImage.imageOrientation == UIImageOrientationUp || sourceImage.imageOrientation == UIImageOrientationDown) {
-        bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
+        bitmap = CGBitmapContextCreate(NULL, targetWidth, targetHeight, CGImageGetBitsPerComponent(imageRef), CGImageGetBitsPerComponent(imageRef) * image.size.width, colorSpaceInfo, bitmapInfo);
+        
         
     } else {
-        bitmap = CGBitmapContextCreate(NULL, targetHeight, targetWidth, CGImageGetBitsPerComponent(imageRef), CGImageGetBytesPerRow(imageRef), colorSpaceInfo, bitmapInfo);
+        bitmap = CGBitmapContextCreate(NULL, targetHeight, targetWidth, CGImageGetBitsPerComponent(imageRef), CGImageGetBitsPerComponent(imageRef) * image.size.width, colorSpaceInfo, bitmapInfo);
         
     }       
     
@@ -124,8 +122,9 @@
         CGContextTranslateCTM (bitmap, targetWidth, targetHeight);
         CGContextRotateCTM (bitmap, radians(-180.));
     }
-    
+
     CGContextDrawImage(bitmap, CGRectMake(0, 0, targetWidth, targetHeight), imageRef);
+    CGImageRelease(imageRef);
 
     CGImageRef ref = CGBitmapContextCreateImage(bitmap);
     UIImage* newImage = [UIImage imageWithCGImage:ref];
