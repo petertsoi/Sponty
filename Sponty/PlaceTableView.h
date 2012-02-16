@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface PlaceTableView : UITableView
+@interface PlaceTableView : UITableView {
+    CGPoint touchBeganLocation;
+}
 
 @end

@@ -115,7 +115,7 @@
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = (UITouch *)[[touches allObjects] objectAtIndex:0];
     CGPoint location = [touch locationInView:self];
-    if (location.x - touchStartLocation.x < -100) {
+    if (location.x - touchStartLocation.x < -100 && currentSelection != numberLoaded - 1) {
         [self scrollLeft:self];
     } else if (location.x - touchStartLocation.x > 100){
         if (currentSelection == 0)
