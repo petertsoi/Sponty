@@ -25,14 +25,17 @@
 }
 
 - (void) layoutSubviews {
-    [self setBackgroundColor:[UIColor blackColor]];
-    spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [spinner setCenter:self.center];
-    UIView * test = [[UIView alloc] init];
-    [test setFrame:CGRectMake(0, 0, spinner.frame.size.width, spinner.frame.size.height)];
-    [test setBackgroundColor:[UIColor blackColor]];
-    [spinner startAnimating];
-    [self addSubview:spinner];
+    if (!self.image) {
+        [self setBackgroundColor:[UIColor blackColor]];
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [spinner setCenter:self.center];
+        
+        UIView * test = [[UIView alloc] init];
+        [test setFrame:CGRectMake(0, 0, spinner.frame.size.width, spinner.frame.size.height)];
+        [test setBackgroundColor:[UIColor blackColor]];
+        [spinner startAnimating];
+        [self addSubview:spinner];
+    }
 }
 
 - (void)loadImageFromURLString:(NSString *)theUrlString{
@@ -133,6 +136,11 @@
     CGImageRelease(ref);
     
     return newImage; 
+}
+
+- (void) dealloc {
+    [spinner release];
+    [super dealloc];
 }
 
 @end

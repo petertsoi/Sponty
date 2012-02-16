@@ -40,6 +40,10 @@
 #pragma mark - View lifecycle
 
 - (IBAction) startButtonPressed:(id) sender {
+    if (placeVC) {
+        [placeVC release];
+        placeVC = nil;
+    }
     placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle] withController:self];
     [self switchedToNewPlace:placeVC];
 }
@@ -76,6 +80,12 @@
     
 }
 
+- (void)swipedLeft:(id)sender {
+    if (placeVC) {
+        [self.navigationController pushViewController:placeVC animated:YES];
+    }
+}
+
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace {
     placeVC = newPlace;
     placeVC.delegate = self;
@@ -105,6 +115,10 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bgpattern"]]];
     [self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
+    
+    gestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedLeft:)];
+    [gestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:gestureRecognizer];
     
     [self selectedFriends:nil];
     

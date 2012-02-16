@@ -67,8 +67,11 @@
     [UIView commitAnimations];
 }
 
-- (void)snapMiddle{
+
+
+- (void)snapMiddleWithDelay:(NSTimeInterval) delay{
     [UIView beginAnimations:@"snapToMiddle" context:NULL];
+    [UIView setAnimationDelay:delay];
     [UIView setAnimationDuration:0.25f];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationBeginsFromCurrentState:YES];
@@ -80,6 +83,10 @@
         ++i;
     }
     [UIView commitAnimations];
+}
+
+- (void) snapMiddle {
+    [self snapMiddleWithDelay:0];
 }
 
 
@@ -118,8 +125,10 @@
     if (location.x - touchStartLocation.x < -100 && currentSelection != numberLoaded - 1) {
         [self scrollLeft:self];
     } else if (location.x - touchStartLocation.x > 100){
-        if (currentSelection == 0)
+        if (currentSelection == 0) {
             [delagate.navigationController popViewControllerAnimated:YES];
+            [self snapMiddleWithDelay:0.25];
+        }
         else if (currentSelection > 0) 
             [self scrollRight:self];
     } else {

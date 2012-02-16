@@ -18,6 +18,7 @@
     IBOutlet UIButton * startButton;
     IBOutlet Checkbox * friendsCheckbox;
     IBOutlet Checkbox * dateCheckbox;
+    UISwipeGestureRecognizer * gestureRecognizer;
     PlaceViewController * placeVC;
     
     CLLocationManager * locationManager;
@@ -29,6 +30,7 @@
 
 - (IBAction) startButtonPressed:(id) sender; 
 - (IBAction) showSettings:(id) sender;
+- (void) swipedLeft:(id)sender;
 - (void) finishedEditingSettings;
 - (PlaceViewController *) getNextPlace;
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace;
