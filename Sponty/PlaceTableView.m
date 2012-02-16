@@ -38,13 +38,20 @@
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"Touch ended in TableView");
     CGPoint curTouchLocation = [[touches anyObject] locationInView:self.superview.superview];
     if (fabsf(curTouchLocation.x - touchBeganLocation.x) > 7.0f) {
         [super touchesCancelled:touches withEvent:event];
         [self.superview touchesEnded:touches withEvent:event];
     } else {
         [super touchesEnded:touches withEvent:event];
+        [self.superview touchesEnded:touches withEvent:event];
     }
+}
+
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"Touches cancelled in TableView");
+    [self touchesEnded:touches withEvent:event];
 }
 
 @end
