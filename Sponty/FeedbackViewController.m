@@ -86,7 +86,15 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bgpattern.png"]]];
     
-    [feedback setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"feedbackBoxBG.png"]]];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0) {
+        [feedback setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"feedbackBoxBG.png"]]];
+    } else {
+        UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"feedbackBoxBG.png"]];
+        [feedback insertSubview:bg atIndex:0];
+        [bg release];
+        
+        [blurb setFont:[UIFont fontWithName:@"Helvetica Neue" size:16]];
+    }
     
     NSString * nameStr = [[NSUserDefaults standardUserDefaults] valueForKey:@"feedbackName"];
     if (nameStr) {

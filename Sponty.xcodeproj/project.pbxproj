@@ -180,48 +180,6 @@
 		0A7C2565148374DC003DA519 /* CustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2564148374DC003DA519 /* CustomNavBar.m */; };
 		0A7C25681483781A003DA519 /* CustomNavBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C25671483781A003DA519 /* CustomNavBG.png */; };
 		0A7C256A14837836003DA519 /* CustomNavBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C256914837836003DA519 /* CustomNavBG@2x.png */; };
-		0A836CD61489A22900E1D64D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C254F14836C11003DA519 /* main.m */; };
-		0A836CD71489A22900E1D64D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C255314836C11003DA519 /* AppDelegate.m */; };
-		0A836CD81489A22900E1D64D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C255614836C11003DA519 /* ViewController.m */; };
-		0A836CD91489A22900E1D64D /* CustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2564148374DC003DA519 /* CustomNavBar.m */; };
-		0A836CDA1489A22900E1D64D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE13141483860E003FFE86 /* SettingsViewController.m */; };
-		0A836CDB1489A22900E1D64D /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46881484129400B6B32D /* PlaceViewController.m */; };
-		0A836CDC1489A22900E1D64D /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46931484186F00B6B32D /* PlaceMapView.m */; };
-		0A836CDD1489A22900E1D64D /* PlaceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56357A14845608000A1EEE /* PlaceDetailView.m */; };
-		0A836CDE1489A22900E1D64D /* MocapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CB6931488123000E7263B /* MocapOverlayView.m */; };
-		0A836CE01489A22900E1D64D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB658FE14845C6C00716B6E /* MapKit.framework */; };
-		0A836CE11489A22900E1D64D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254314836C11003DA519 /* UIKit.framework */; };
-		0A836CE21489A22900E1D64D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254514836C11003DA519 /* Foundation.framework */; };
-		0A836CE31489A22900E1D64D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7C254714836C11003DA519 /* CoreGraphics.framework */; };
-		0A836CE51489A22900E1D64D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C254C14836C11003DA519 /* InfoPlist.strings */; };
-		0A836CE61489A22900E1D64D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C255814836C11003DA519 /* ViewController.xib */; };
-		0A836CE71489A22900E1D64D /* PlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C256014837097003DA519 /* PlaceViewController.xib */; };
-		0A836CE81489A22900E1D64D /* CustomNavBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C25671483781A003DA519 /* CustomNavBG.png */; };
-		0A836CE91489A22900E1D64D /* CustomNavBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7C256914837836003DA519 /* CustomNavBG@2x.png */; };
-		0A836CEA1489A22900E1D64D /* Santa Fe LET.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD655F14837D6500537619 /* Santa Fe LET.ttf */; };
-		0A836CEB1489A22900E1D64D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE130F14838154003FFE86 /* SettingsViewController.xib */; };
-		0A836CEC1489A22900E1D64D /* SettingsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE13161483898C003FFE86 /* SettingsBG.png */; };
-		0A836CED1489A22900E1D64D /* SettingsBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE13171483898C003FFE86 /* SettingsBG@2x.png */; };
-		0A836CEE1489A22900E1D64D /* PlacePageBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D468B1484141C00B6B32D /* PlacePageBG.png */; };
-		0A836CEF1489A22900E1D64D /* PlacePageBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D468C1484141C00B6B32D /* PlacePageBG@2x.png */; };
-		0A836CF01489A22900E1D64D /* PlaceDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A56357C1484564F000A1EEE /* PlaceDetailView.xib */; };
-		0A836CF11489A22900E1D64D /* PlaceMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB658FB14845AE500716B6E /* PlaceMapView.xib */; };
-		0A836CF21489A22900E1D64D /* ShowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659011484622B00716B6E /* ShowButton.png */; };
-		0A836CF31489A22900E1D64D /* ShowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659021484622B00716B6E /* ShowButton@2x.png */; };
-		0A836CF41489A22900E1D64D /* NotMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659051484629D00716B6E /* NotMe.png */; };
-		0A836CF51489A22900E1D64D /* NotMe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB659061484629D00716B6E /* NotMe@2x.png */; };
-		0A836CF61489A22900E1D64D /* FeedbackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB65909148463D800716B6E /* FeedbackButton.png */; };
-		0A836CF71489A22900E1D64D /* FeedbackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6590A148463D800716B6E /* FeedbackButton@2x.png */; };
-		0A836CFA1489A22900E1D64D /* mocaptrackscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9CB69014880F0B00E7263B /* mocaptrackscreen.png */; };
-		0A836CFB1489A22900E1D64D /* bespontaneous_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD14E148890C600B8D329 /* bespontaneous_btn.png */; };
-		0A836CFC1489A22900E1D64D /* bespontaneous_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD14F148890C600B8D329 /* bespontaneous_btn@2x.png */; };
-		0A836CFD1489A22900E1D64D /* bgpattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD150148890C600B8D329 /* bgpattern.png */; };
-		0A836CFE1489A22900E1D64D /* bgpattern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD151148890C600B8D329 /* bgpattern@2x.png */; };
-		0A836CFF1489A22900E1D64D /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD152148890C600B8D329 /* gear.png */; };
-		0A836D001489A22900E1D64D /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD153148890C600B8D329 /* gear@2x.png */; };
-		0A836D011489A22900E1D64D /* mocaptrackscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD154148890C600B8D329 /* mocaptrackscreen@2x.png */; };
-		0A836D0A1489A22900E1D64D /* backbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDA83A14898B8600187122 /* backbtn.png */; };
-		0A836D0B1489A22900E1D64D /* backbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDA83B14898B8600187122 /* backbtn@2x.png */; };
 		0A9CB69114880F0B00E7263B /* mocaptrackscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9CB69014880F0B00E7263B /* mocaptrackscreen.png */; };
 		0A9CB6941488123000E7263B /* MocapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CB6931488123000E7263B /* MocapOverlayView.m */; };
 		0AA0E6DF14A2800300436B96 /* RegistrationSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA0E6DD14A2800300436B96 /* RegistrationSelectionViewController.m */; };
@@ -302,7 +260,7 @@
 		0A02AFD914ECD77800C108EF /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		0A02AFDA14ECD77900C108EF /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		0A02B05B14ECE1E900C108EF /* Sponty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sponty.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A02B05D14ECE1EB00C108EF /* Sponty copy3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Sponty copy3-Info.plist"; path = "/Users/petertsoi/Documents/work/Apps/Sponty/Sponty copy3-Info.plist"; sourceTree = "<absolute>"; };
+		0A02B05D14ECE1EB00C108EF /* Spontyapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Spontyapp-Info.plist"; path = "/Users/petertsoi/Documents/work/Apps/Sponty/Spontyapp-Info.plist"; sourceTree = "<absolute>"; };
 		0A0D46871484129400B6B32D /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		0A0D46881484129400B6B32D /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		0A0D468B1484141C00B6B32D /* PlacePageBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlacePageBG.png; path = png/PlacePageBG.png; sourceTree = "<group>"; };
@@ -359,8 +317,6 @@
 		0A7C2564148374DC003DA519 /* CustomNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavBar.m; sourceTree = "<group>"; };
 		0A7C25671483781A003DA519 /* CustomNavBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CustomNavBG.png; path = png/CustomNavBG.png; sourceTree = "<group>"; };
 		0A7C256914837836003DA519 /* CustomNavBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CustomNavBG@2x.png"; path = "png/CustomNavBG@2x.png"; sourceTree = "<group>"; };
-		0A836D0F1489A22900E1D64D /* Sponty Mocap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sponty Mocap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A836D121489A22A00E1D64D /* Sponty copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Sponty copy-Info.plist"; path = "/Users/petertsoi/Documents/work/Apps/Sponty/Sponty copy-Info.plist"; sourceTree = "<absolute>"; };
 		0A836D131489A2E000E1D64D /* Sponty-Mocap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sponty-Mocap-Prefix.pch"; sourceTree = "<group>"; };
 		0A9CB69014880F0B00E7263B /* mocaptrackscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mocaptrackscreen.png; path = png/mocaptrackscreen.png; sourceTree = "<group>"; };
 		0A9CB6921488123000E7263B /* MocapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MocapOverlayView.h; sourceTree = "<group>"; };
@@ -403,7 +359,6 @@
 		0AAB937314E3978100DDE13B /* partyCategory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "partyCategory@2x.png"; path = "png/partyCategory@2x.png"; sourceTree = "<group>"; };
 		0AAB937414E3978100DDE13B /* relaxCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = relaxCategory.png; path = png/relaxCategory.png; sourceTree = "<group>"; };
 		0AAB937514E3978100DDE13B /* relaxCategory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "relaxCategory@2x.png"; path = "png/relaxCategory@2x.png"; sourceTree = "<group>"; };
-		0AAB93F214E3A09A00DDE13B /* Sponty copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Sponty copy2-Info.plist"; path = "/Users/petertsoi/Documents/work/Apps/Sponty/Sponty copy2-Info.plist"; sourceTree = "<absolute>"; };
 		0AB043A914B7E1D000663903 /* PlaceScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceScrollerView.h; sourceTree = "<group>"; };
 		0AB043AA14B7E1D000663903 /* PlaceScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceScrollerView.m; sourceTree = "<group>"; };
 		0AB658FB14845AE500716B6E /* PlaceMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceMapView.xib; sourceTree = "<group>"; };
@@ -478,17 +433,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A836CDF1489A22900E1D64D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A836CE01489A22900E1D64D /* MapKit.framework in Frameworks */,
-				0A836CE11489A22900E1D64D /* UIKit.framework in Frameworks */,
-				0A836CE21489A22900E1D64D /* Foundation.framework in Frameworks */,
-				0A836CE31489A22900E1D64D /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -501,9 +445,6 @@
 				0A7C254914836C11003DA519 /* Sponty */,
 				0A7C254214836C11003DA519 /* Frameworks */,
 				0A7C254014836C11003DA519 /* Products */,
-				0A836D121489A22A00E1D64D /* Sponty copy-Info.plist */,
-				0AAB93F214E3A09A00DDE13B /* Sponty copy2-Info.plist */,
-				0A02B05D14ECE1EB00C108EF /* Sponty copy3-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -511,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				0A7C253F14836C11003DA519 /* Sponty.app */,
-				0A836D0F1489A22900E1D64D /* Sponty Mocap.app */,
 				0A02B05B14ECE1E900C108EF /* Sponty.app */,
 			);
 			name = Products;
@@ -594,6 +534,7 @@
 			children = (
 				0AB658FE14845C6C00716B6E /* MapKit.framework */,
 				0A7C254B14836C11003DA519 /* Sponty-Info.plist */,
+				0A02B05D14ECE1EB00C108EF /* Spontyapp-Info.plist */,
 				0A7C254C14836C11003DA519 /* InfoPlist.strings */,
 				0A7C254F14836C11003DA519 /* main.m */,
 				0A7C255114836C11003DA519 /* Sponty-Prefix.pch */,
@@ -760,30 +701,13 @@
 			productReference = 0A7C253F14836C11003DA519 /* Sponty.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0A836CD41489A22900E1D64D /* Sponty Mocap */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A836D0C1489A22900E1D64D /* Build configuration list for PBXNativeTarget "Sponty Mocap" */;
-			buildPhases = (
-				0A836CD51489A22900E1D64D /* Sources */,
-				0A836CDF1489A22900E1D64D /* Frameworks */,
-				0A836CE41489A22900E1D64D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Sponty Mocap";
-			productName = Sponty;
-			productReference = 0A836D0F1489A22900E1D64D /* Sponty Mocap.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0A7C253614836C10003DA519 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Apple Inc";
 			};
 			buildConfigurationList = 0A7C253914836C10003DA519 /* Build configuration list for PBXProject "Sponty" */;
@@ -799,7 +723,6 @@
 			projectRoot = "";
 			targets = (
 				0A7C253E14836C11003DA519 /* Sponty */,
-				0A836CD41489A22900E1D64D /* Sponty Mocap */,
 				0A02AFDE14ECE1E900C108EF /* Spontyapp */,
 			);
 		};
@@ -976,42 +899,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A836CE41489A22900E1D64D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A836CE51489A22900E1D64D /* InfoPlist.strings in Resources */,
-				0A836CE61489A22900E1D64D /* ViewController.xib in Resources */,
-				0A836CE71489A22900E1D64D /* PlaceViewController.xib in Resources */,
-				0A836CE81489A22900E1D64D /* CustomNavBG.png in Resources */,
-				0A836CE91489A22900E1D64D /* CustomNavBG@2x.png in Resources */,
-				0A836CEA1489A22900E1D64D /* Santa Fe LET.ttf in Resources */,
-				0A836CEB1489A22900E1D64D /* SettingsViewController.xib in Resources */,
-				0A836CEC1489A22900E1D64D /* SettingsBG.png in Resources */,
-				0A836CED1489A22900E1D64D /* SettingsBG@2x.png in Resources */,
-				0A836CEE1489A22900E1D64D /* PlacePageBG.png in Resources */,
-				0A836CEF1489A22900E1D64D /* PlacePageBG@2x.png in Resources */,
-				0A836CF01489A22900E1D64D /* PlaceDetailView.xib in Resources */,
-				0A836CF11489A22900E1D64D /* PlaceMapView.xib in Resources */,
-				0A836CF21489A22900E1D64D /* ShowButton.png in Resources */,
-				0A836CF31489A22900E1D64D /* ShowButton@2x.png in Resources */,
-				0A836CF41489A22900E1D64D /* NotMe.png in Resources */,
-				0A836CF51489A22900E1D64D /* NotMe@2x.png in Resources */,
-				0A836CF61489A22900E1D64D /* FeedbackButton.png in Resources */,
-				0A836CF71489A22900E1D64D /* FeedbackButton@2x.png in Resources */,
-				0A836CFA1489A22900E1D64D /* mocaptrackscreen.png in Resources */,
-				0A836CFB1489A22900E1D64D /* bespontaneous_btn.png in Resources */,
-				0A836CFC1489A22900E1D64D /* bespontaneous_btn@2x.png in Resources */,
-				0A836CFD1489A22900E1D64D /* bgpattern.png in Resources */,
-				0A836CFE1489A22900E1D64D /* bgpattern@2x.png in Resources */,
-				0A836CFF1489A22900E1D64D /* gear.png in Resources */,
-				0A836D001489A22900E1D64D /* gear@2x.png in Resources */,
-				0A836D011489A22900E1D64D /* mocaptrackscreen@2x.png in Resources */,
-				0A836D0A1489A22900E1D64D /* backbtn.png in Resources */,
-				0A836D0B1489A22900E1D64D /* backbtn@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1097,22 +984,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A836CD51489A22900E1D64D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A836CD61489A22900E1D64D /* main.m in Sources */,
-				0A836CD71489A22900E1D64D /* AppDelegate.m in Sources */,
-				0A836CD81489A22900E1D64D /* ViewController.m in Sources */,
-				0A836CD91489A22900E1D64D /* CustomNavBar.m in Sources */,
-				0A836CDA1489A22900E1D64D /* SettingsViewController.m in Sources */,
-				0A836CDB1489A22900E1D64D /* PlaceViewController.m in Sources */,
-				0A836CDC1489A22900E1D64D /* PlaceMapView.m in Sources */,
-				0A836CDD1489A22900E1D64D /* PlaceDetailView.m in Sources */,
-				0A836CDE1489A22900E1D64D /* MocapOverlayView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1157,8 +1028,9 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
-				INFOPLIST_FILE = "Sponty copy3-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "Spontyapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1170,8 +1042,9 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
-				INFOPLIST_FILE = "Sponty copy3-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "Spontyapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1196,11 +1069,12 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
 				SDKROOT = iphoneos;
 			};
@@ -1218,11 +1092,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
 				SDKROOT = iphoneos;
@@ -1236,8 +1111,9 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1249,35 +1125,10 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Sponty;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		0A836D0D1489A22900E1D64D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sponty/Sponty-Mocap-Prefix.pch";
-				INFOPLIST_FILE = "Sponty copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PRODUCT_NAME = "Sponty Mocap";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		0A836D0E1489A22900E1D64D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sponty/Sponty-Mocap-Prefix.pch";
-				INFOPLIST_FILE = "Sponty copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PRODUCT_NAME = "Sponty Mocap";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1308,15 +1159,6 @@
 			buildConfigurations = (
 				0A7C255E14836C11003DA519 /* Debug */,
 				0A7C255F14836C11003DA519 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A836D0C1489A22900E1D64D /* Build configuration list for PBXNativeTarget "Sponty Mocap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A836D0D1489A22900E1D64D /* Debug */,
-				0A836D0E1489A22900E1D64D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

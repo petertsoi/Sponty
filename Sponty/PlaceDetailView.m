@@ -56,14 +56,23 @@
 
 - (void) setDistanceSuggest:(NSString *) suggestion{
     [distanceSuggestion setText:suggestion];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0) {
+        [distanceSuggestion setFont:[UIFont fontWithName:@"Helvetica Neue" size:16]];
+    }
 }
 
 - (void) setWeatherSuggest:(NSString *) suggestion{
     weatherSuggestion.text = suggestion;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0) {
+        [weatherSuggestion setFont:[UIFont fontWithName:@"Helvetica Neue" size:16]];
+    }
 }
 
 - (void) setTimeSuggest:(NSString *) suggestion{
     timeSuggestion.text = suggestion;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0) {
+        [timeSuggestion setFont:[UIFont fontWithName:@"Helvetica Neue" size:16]];
+    }
 }
 
 

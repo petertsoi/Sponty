@@ -43,15 +43,27 @@
         places = [[loader getAllPlaces] mutableCopy];
         
         NSMutableDictionary * placesDictTmp = [[NSMutableDictionary alloc] init];
-        for (NSString * category in categories) {
-            NSMutableArray * catList = [[NSMutableArray alloc] init];
-            for (Place * place in places ) {
+        for (Place * place in places ) {
+            bool hasCategory = NO;
+            for (NSString * category in categories) {
+                NSMutableArray * catList = [placesDictTmp objectForKey:category];
+                if (!catList)
+                    catList = [[NSMutableArray alloc] init];
                 if ([place.categories containsObject:category]) {
                     [catList addObject:place];
+                    hasCategory = YES;
                 }
+                [placesDictTmp setValue:catList forKey:category];
             }
-            [placesDictTmp setValue:catList forKey:category];
-            [catList release];
+            if (!hasCategory) {
+                NSMutableArray * otherList = [placesDictTmp objectForKey:@"other"];
+                if (!otherList) {
+                    otherList = [[NSMutableArray alloc] init];
+                }
+                [otherList addObject:place];
+                [placesDictTmp setValue:otherList forKey:@"other"];
+            }
+            
         }
         placeCategories = [[NSDictionary alloc] initWithDictionary:placesDictTmp];
         [placesDictTmp release];
@@ -78,7 +90,6 @@
 - (void)setCurrentViewToIndex:(int)index {
     if (index < [loadedPlaces count]) {
         currentView = [(Place * )[loadedPlaces objectAtIndex:index] view];
-        //NSLog(@"Place: %@", ((Place * )[loadedPlaces objectAtIndex:index]).name);
     }
     while (index == indexOfListView && [loadedPlaces count] > indexOfListView) {
         Place * removed = [loadedPlaces lastObject];
@@ -97,13 +108,9 @@
 
 - (void) hideMapView {
     [self.view setUserInteractionEnabled:NO];
-    //[mapView setUserInteractionEnabled:NO];
-    //[currentView setUserInteractionEnabled:NO];
     [UIView transitionFromView:mapView toView:currentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
         [mapView retain];
         [self.view setUserInteractionEnabled:YES];
-        
-        //[currentView setUserInteractionEnabled:YES];
     }];
     
 }
@@ -120,16 +127,10 @@
     
     mapView = [[[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0] retain];
     mapView.delegate = self;
-    //[self.view setUserInteractionEnabled:NO];
-    //[currentView setUserInteractionEnabled:NO];
-    //[mapView setUserInteractionEnabled:NO];
     [UIView transitionFromView:currentView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
         [mapView roundCorners];
         [mapView setLatLong:currentView.place.latLong];
-        //[self.view setUserInteractionEnabled:YES];
-        //[mapView setUserInteractionEnabled:YES];
     }];
-    //[self.view addSubview:[[MocapOverlayView alloc] initWithSuperView:self.view]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -139,11 +140,18 @@
     PlaceListViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"PlaceListViewCell" owner:self options:nil] objectAtIndex:0];
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0) {
+            [cell.placeNameLabel setFont:[UIFont fontWithName:@"Helvetica Neue" size:16]];
+            [cell.distanceLabel setFont:[UIFont fontWithName:@"Helvetica Neue" size:12]];
+        }
     }
 
     Place * thisPlace;
     if (listFilter < 0) {
-        thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+        if (indexPath.section == [categories count]) 
+            thisPlace = [[placeCategories objectForKey:@"other"] objectAtIndex:indexPath.row];
+        else
+            thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     } else {
         thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:listFilter]] objectAtIndex:indexPath.row];
     }
@@ -159,7 +167,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Place * thisPlace;
     if (listFilter < 0) {
-        thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+        if (indexPath.section == [categories count]) 
+            thisPlace = [[placeCategories objectForKey:@"other"] objectAtIndex:indexPath.row];
+        else
+            thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     } else {
         thisPlace = [[placeCategories objectForKey:[categories objectAtIndex:listFilter]] objectAtIndex:indexPath.row];
     }
@@ -179,9 +190,12 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (listFilter == -1)
-        return [categories count];
-    else
+    if (listFilter == -1) {
+        if (![placeCategories objectForKey:@"other"])
+            return [categories count];
+        else
+            return [categories count] + 1;
+    } else
         return 1;
 }
 
@@ -194,7 +208,7 @@
             return [categories objectAtIndex:listFilter];
         }
     } else {
-        return @"Other";
+        return @"other";
     }
 }
 
@@ -208,82 +222,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-    if (listFilter < 0) 
-        return [[placeCategories objectForKey:[categories objectAtIndex:section]] count];
-    else
+    if (listFilter < 0) {
+        if (section == [categories count])
+            return [[placeCategories objectForKey:@"other"] count];
+        else
+            return [[placeCategories objectForKey:[categories objectAtIndex:section]] count];
+    } else
         return [[placeCategories objectForKey:[categories objectAtIndex:listFilter]] count];
 
 }
-/*
-- (IBAction)showNextPlace:(id)sender {
-    ++counter;
-    PlaceDetailView * newDetailView = [[[NSBundle mainBundle] loadNibNamed:@"PlaceDetailView" owner:self options:nil] objectAtIndex:0];
-    [newDetailView retain];
-    
-    switch (counter) {
-        case 1:
-            newDetailView = nextPreloaded;
-            break;
 
-        case 2:
-            [newDetailView setPlaceName:@"Boardwalk Bowl"];
-            [newDetailView setFeatureImage:[UIImage imageNamed:@"bowling"]];
-            [newDetailView setTimeSuggest:@"It's open for another 5 hours and 35 minutes."];
-            [newDetailView setWeatherSuggest:@"It's getting chilly, head over to Boardwalk Bowl to grab a lane."];
-            [newDetailView setDistanceSuggest:@"It's a short car ride away (0.4 miles)."];
-            break;
-
-        case 3:
-            [newDetailView setPlaceName:@"Woodstock Pizza"];
-            [newDetailView setFeatureImage:[UIImage imageNamed:@"pizza"]];
-            [newDetailView setTimeSuggest:@"It's open for another 6 hours and 12 minutes."];
-            [newDetailView setWeatherSuggest:@"There's nothing hot slice of pesto pizza can't solve!"];
-            [newDetailView setDistanceSuggest:@"You could walk there, its 0.3 miles away."];
-            break;
-
-        case 4:
-            [newDetailView setPlaceName:@"Pacific Street"];
-            [newDetailView setFeatureImage:[UIImage imageNamed:@"pacific"]];
-            [newDetailView setTimeSuggest:@"It's always open."];
-            [newDetailView setWeatherSuggest:@"Go enjoy this brisk night by walking under the lights."];
-            [newDetailView setDistanceSuggest:@"You're practically there!"];
-            break;
-            
-        default:
-            [newDetailView setPlaceName:@"Fenton's Ice Cream"];
-            [newDetailView setFeatureImage:[UIImage imageNamed:@"icecream"]];
-            break;
-    }
-    [self.view insertSubview:newDetailView belowSubview:currentView];
-    
-    [UIView transitionFromView:detailView toView:currentView duration:0.5 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished){
-        [detailView release];
-        detailView = newDetailView;
-    }];
-}
-*/
 #pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-}
-*/
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

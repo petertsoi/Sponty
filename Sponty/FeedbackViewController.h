@@ -11,6 +11,8 @@
 @class ViewController;
 
 @interface FeedbackViewController : UIViewController {
+    IBOutlet UILabel * blurb;
+    
     IBOutlet UITextField * name;
     IBOutlet UITextView * feedback;
     
