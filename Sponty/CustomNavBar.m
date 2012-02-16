@@ -28,6 +28,7 @@
         [titleLabel setShadowColor:[UIColor colorWithRed:199.0/255.0 green:21.0/255.0 blue:67.0/255.0 alpha:0.98]];
         [titleLabel setShadowOffset:CGSizeMake(1.5, 1.5)];
         [contain addSubview:titleLabel];
+        [self setBarStyle:UIBarStyleBlackTranslucent];
         
         /*UIView * bg = [[UIView alloc] initWithFrame:self.frame];
         [bg setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"CustomNavBG.png"]]];

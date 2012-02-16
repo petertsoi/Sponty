@@ -36,6 +36,7 @@
 }
 
 - (IBAction) sendFeedback:(id)sender {
+    
     responseData = [[NSMutableData data] retain];
     
     NSMutableURLRequest *request = [NSMutableURLRequest 
@@ -46,6 +47,7 @@
         nameStr = @"[empty]";
     } else {
         nameStr = name.text;
+        [[NSUserDefaults standardUserDefaults] setValue:nameStr forKey:@"feedbackName"];
     }
     NSString * data;
     if (feedback.text == @"") {
@@ -85,6 +87,11 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bgpattern.png"]]];
     
     [feedback setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"feedbackBoxBG.png"]]];
+    
+    NSString * nameStr = [[NSUserDefaults standardUserDefaults] valueForKey:@"feedbackName"];
+    if (nameStr) {
+        name.text = nameStr;
+    }
 }
 
 - (void)viewDidUnload
