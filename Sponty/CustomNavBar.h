@@ -12,6 +12,8 @@
     UILabel * titleLabel;
 }
 
+//@property (nonatomic) UIView * backgroundView;
+
 - (void) setTitle:(NSString *) newTitle;
 
 @end

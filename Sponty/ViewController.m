@@ -10,6 +10,7 @@
 
 #import "PlaceViewController.h"
 #import "SettingsViewController.h"
+#import "FeedbackViewController.h"
 
 #import "Checkbox.h"
 
@@ -78,6 +79,12 @@
          [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"onDate"];
     }
     
+}
+
+- (IBAction) showFeedback:(id)sender {
+    FeedbackViewController *settingsVC = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:[NSBundle mainBundle]];
+    settingsVC.delegate = self;
+    [self presentModalViewController:settingsVC animated:YES];
 }
 
 - (void)swipedLeft:(id)sender {

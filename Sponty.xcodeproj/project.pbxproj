@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A02AFBF14ECCEC800C108EF /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A02AFBD14ECCEC700C108EF /* FeedbackViewController.m */; };
+		0A02AFC014ECCEC800C108EF /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFBE14ECCEC700C108EF /* FeedbackViewController.xib */; };
+		0A02AFC314ECCFD800C108EF /* sendFeedbackBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC114ECCFD800C108EF /* sendFeedbackBtn.png */; };
+		0A02AFC414ECCFD800C108EF /* sendFeedbackBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC114ECCFD800C108EF /* sendFeedbackBtn.png */; };
+		0A02AFC514ECCFD800C108EF /* sendFeedbackBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC214ECCFD800C108EF /* sendFeedbackBtn@2x.png */; };
+		0A02AFC614ECCFD800C108EF /* sendFeedbackBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC214ECCFD800C108EF /* sendFeedbackBtn@2x.png */; };
+		0A02AFC914ECCFE300C108EF /* gotoFeedbackBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC714ECCFE300C108EF /* gotoFeedbackBtn.png */; };
+		0A02AFCA14ECCFE300C108EF /* gotoFeedbackBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC714ECCFE300C108EF /* gotoFeedbackBtn.png */; };
+		0A02AFCB14ECCFE300C108EF /* gotoFeedbackBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC814ECCFE300C108EF /* gotoFeedbackBtn@2x.png */; };
+		0A02AFCC14ECCFE300C108EF /* gotoFeedbackBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFC814ECCFE300C108EF /* gotoFeedbackBtn@2x.png */; };
+		0A02AFCF14ECD48A00C108EF /* feedbackBoxBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFCD14ECD48A00C108EF /* feedbackBoxBG.png */; };
+		0A02AFD014ECD48A00C108EF /* feedbackBoxBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFCD14ECD48A00C108EF /* feedbackBoxBG.png */; };
+		0A02AFD114ECD48A00C108EF /* feedbackBoxBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFCE14ECD48A00C108EF /* feedbackBoxBG@2x.png */; };
+		0A02AFD214ECD48A00C108EF /* feedbackBoxBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFCE14ECD48A00C108EF /* feedbackBoxBG@2x.png */; };
+		0A02AFD514ECD6E300C108EF /* textFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFD314ECD6E300C108EF /* textFieldBG.png */; };
+		0A02AFD614ECD6E300C108EF /* textFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFD314ECD6E300C108EF /* textFieldBG.png */; };
+		0A02AFD714ECD6E300C108EF /* textFieldBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFD414ECD6E300C108EF /* textFieldBG@2x.png */; };
+		0A02AFD814ECD6E300C108EF /* textFieldBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A02AFD414ECD6E300C108EF /* textFieldBG@2x.png */; };
+		0A02AFDB14ECD77900C108EF /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A02AFDA14ECD77900C108EF /* CustomTextField.m */; };
+		0A02AFDC14ECD77900C108EF /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A02AFDA14ECD77900C108EF /* CustomTextField.m */; };
 		0A0D46891484129400B6B32D /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46881484129400B6B32D /* PlaceViewController.m */; };
 		0A0D468D1484141C00B6B32D /* PlacePageBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D468B1484141C00B6B32D /* PlacePageBG.png */; };
 		0A0D468E1484141C00B6B32D /* PlacePageBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D468C1484141C00B6B32D /* PlacePageBG@2x.png */; };
@@ -266,6 +286,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A02AFBC14ECCEC700C108EF /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		0A02AFBD14ECCEC700C108EF /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		0A02AFBE14ECCEC700C108EF /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		0A02AFC114ECCFD800C108EF /* sendFeedbackBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sendFeedbackBtn.png; path = png/sendFeedbackBtn.png; sourceTree = "<group>"; };
+		0A02AFC214ECCFD800C108EF /* sendFeedbackBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sendFeedbackBtn@2x.png"; path = "png/sendFeedbackBtn@2x.png"; sourceTree = "<group>"; };
+		0A02AFC714ECCFE300C108EF /* gotoFeedbackBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gotoFeedbackBtn.png; path = png/gotoFeedbackBtn.png; sourceTree = "<group>"; };
+		0A02AFC814ECCFE300C108EF /* gotoFeedbackBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gotoFeedbackBtn@2x.png"; path = "png/gotoFeedbackBtn@2x.png"; sourceTree = "<group>"; };
+		0A02AFCD14ECD48A00C108EF /* feedbackBoxBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feedbackBoxBG.png; path = png/feedbackBoxBG.png; sourceTree = "<group>"; };
+		0A02AFCE14ECD48A00C108EF /* feedbackBoxBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "feedbackBoxBG@2x.png"; path = "png/feedbackBoxBG@2x.png"; sourceTree = "<group>"; };
+		0A02AFD314ECD6E300C108EF /* textFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textFieldBG.png; path = png/textFieldBG.png; sourceTree = "<group>"; };
+		0A02AFD414ECD6E300C108EF /* textFieldBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "textFieldBG@2x.png"; path = "png/textFieldBG@2x.png"; sourceTree = "<group>"; };
+		0A02AFD914ECD77800C108EF /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		0A02AFDA14ECD77900C108EF /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		0A0D46871484129400B6B32D /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		0A0D46881484129400B6B32D /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		0A0D468B1484141C00B6B32D /* PlacePageBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlacePageBG.png; path = png/PlacePageBG.png; sourceTree = "<group>"; };
@@ -502,10 +535,14 @@
 				0A7C255314836C11003DA519 /* AppDelegate.m */,
 				0AFFFAEE14E33CC90096F788 /* Checkbox.h */,
 				0AFFFAEF14E33CC90096F788 /* Checkbox.m */,
+				0A02AFD914ECD77800C108EF /* CustomTextField.h */,
+				0A02AFDA14ECD77900C108EF /* CustomTextField.m */,
 				0A7C2563148374DC003DA519 /* CustomNavBar.h */,
 				0A7C2564148374DC003DA519 /* CustomNavBar.m */,
 				0A7C255514836C11003DA519 /* ViewController.h */,
 				0A7C255614836C11003DA519 /* ViewController.m */,
+				0A02AFBC14ECCEC700C108EF /* FeedbackViewController.h */,
+				0A02AFBD14ECCEC700C108EF /* FeedbackViewController.m */,
 				0AEDE98314DAF8C000418AE5 /* Place.h */,
 				0AEDE98414DAF8C000418AE5 /* Place.m */,
 				0A56357914845608000A1EEE /* PlaceDetailView.h */,
@@ -535,6 +572,7 @@
 				0ABE13131483860E003FFE86 /* SettingsViewController.h */,
 				0ABE13141483860E003FFE86 /* SettingsViewController.m */,
 				0A6E6F9614DA82FB00FE0DDD /* PlaceListViewCell.xib */,
+				0A02AFBE14ECCEC700C108EF /* FeedbackViewController.xib */,
 				0A7C255814836C11003DA519 /* ViewController.xib */,
 				0AD97ECF14DA76C8002B86F5 /* PlaceListView.xib */,
 				0ABE130F14838154003FFE86 /* SettingsViewController.xib */,
@@ -563,6 +601,14 @@
 		0A7C25661483780B003DA519 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				0A02AFD314ECD6E300C108EF /* textFieldBG.png */,
+				0A02AFD414ECD6E300C108EF /* textFieldBG@2x.png */,
+				0A02AFCD14ECD48A00C108EF /* feedbackBoxBG.png */,
+				0A02AFCE14ECD48A00C108EF /* feedbackBoxBG@2x.png */,
+				0A02AFC114ECCFD800C108EF /* sendFeedbackBtn.png */,
+				0A02AFC214ECCFD800C108EF /* sendFeedbackBtn@2x.png */,
+				0A02AFC714ECCFE300C108EF /* gotoFeedbackBtn.png */,
+				0A02AFC814ECCFE300C108EF /* gotoFeedbackBtn@2x.png */,
 				0AAB936D14E3975200DDE13B /* categories */,
 				0AD97E8B14DA6E29002B86F5 /* nevis.ttf */,
 				0ADD36081488C6590070D2E4 /* attractions */,
@@ -829,6 +875,15 @@
 				0AAB937B14E3978100DDE13B /* partyCategory@2x.png in Resources */,
 				0AAB937C14E3978100DDE13B /* relaxCategory.png in Resources */,
 				0AAB937D14E3978100DDE13B /* relaxCategory@2x.png in Resources */,
+				0A02AFC014ECCEC800C108EF /* FeedbackViewController.xib in Resources */,
+				0A02AFC314ECCFD800C108EF /* sendFeedbackBtn.png in Resources */,
+				0A02AFC514ECCFD800C108EF /* sendFeedbackBtn@2x.png in Resources */,
+				0A02AFC914ECCFE300C108EF /* gotoFeedbackBtn.png in Resources */,
+				0A02AFCB14ECCFE300C108EF /* gotoFeedbackBtn@2x.png in Resources */,
+				0A02AFCF14ECD48A00C108EF /* feedbackBoxBG.png in Resources */,
+				0A02AFD114ECD48A00C108EF /* feedbackBoxBG@2x.png in Resources */,
+				0A02AFD514ECD6E300C108EF /* textFieldBG.png in Resources */,
+				0A02AFD714ECD6E300C108EF /* textFieldBG@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,6 +996,14 @@
 				0AAB93EA14E3A09900DDE13B /* partyCategory@2x.png in Resources */,
 				0AAB93EB14E3A09900DDE13B /* relaxCategory.png in Resources */,
 				0AAB93EC14E3A09900DDE13B /* relaxCategory@2x.png in Resources */,
+				0A02AFC414ECCFD800C108EF /* sendFeedbackBtn.png in Resources */,
+				0A02AFC614ECCFD800C108EF /* sendFeedbackBtn@2x.png in Resources */,
+				0A02AFCA14ECCFE300C108EF /* gotoFeedbackBtn.png in Resources */,
+				0A02AFCC14ECCFE300C108EF /* gotoFeedbackBtn@2x.png in Resources */,
+				0A02AFD014ECD48A00C108EF /* feedbackBoxBG.png in Resources */,
+				0A02AFD214ECD48A00C108EF /* feedbackBoxBG@2x.png in Resources */,
+				0A02AFD614ECD6E300C108EF /* textFieldBG.png in Resources */,
+				0A02AFD814ECD6E300C108EF /* textFieldBG@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +1046,8 @@
 				0AAB932814E37F9500DDE13B /* SBJsonTokeniser.m in Sources */,
 				0AAB932914E37F9500DDE13B /* SBJsonUTF8Stream.m in Sources */,
 				0AAB932A14E37F9500DDE13B /* SBJsonWriter.m in Sources */,
+				0A02AFBF14ECCEC800C108EF /* FeedbackViewController.m in Sources */,
+				0A02AFDB14ECD77900C108EF /* CustomTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,6 +1103,7 @@
 				0AAB939D14E3A09900DDE13B /* SBJsonTokeniser.m in Sources */,
 				0AAB939E14E3A09900DDE13B /* SBJsonUTF8Stream.m in Sources */,
 				0AAB939F14E3A09900DDE13B /* SBJsonWriter.m in Sources */,
+				0A02AFDC14ECD77900C108EF /* CustomTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

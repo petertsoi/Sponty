@@ -30,6 +30,9 @@
 
 - (IBAction) startButtonPressed:(id) sender; 
 - (IBAction) showSettings:(id) sender;
+
+- (IBAction) showFeedback:(id)sender;
+
 - (void) swipedLeft:(id)sender;
 - (void) finishedEditingSettings;
 - (PlaceViewController *) getNextPlace;
