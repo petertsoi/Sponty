@@ -319,7 +319,6 @@
 		0A7C2564148374DC003DA519 /* CustomNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavBar.m; sourceTree = "<group>"; };
 		0A7C25671483781A003DA519 /* CustomNavBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CustomNavBG.png; path = png/CustomNavBG.png; sourceTree = "<group>"; };
 		0A7C256914837836003DA519 /* CustomNavBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CustomNavBG@2x.png"; path = "png/CustomNavBG@2x.png"; sourceTree = "<group>"; };
-		0A836D131489A2E000E1D64D /* Sponty-Mocap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sponty-Mocap-Prefix.pch"; sourceTree = "<group>"; };
 		0A9CB69014880F0B00E7263B /* mocaptrackscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mocaptrackscreen.png; path = png/mocaptrackscreen.png; sourceTree = "<group>"; };
 		0A9CB6921488123000E7263B /* MocapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MocapOverlayView.h; sourceTree = "<group>"; };
 		0A9CB6931488123000E7263B /* MocapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MocapOverlayView.m; sourceTree = "<group>"; };
@@ -540,7 +539,6 @@
 				0A7C254C14836C11003DA519 /* InfoPlist.strings */,
 				0A7C254F14836C11003DA519 /* main.m */,
 				0A7C255114836C11003DA519 /* Sponty-Prefix.pch */,
-				0A836D131489A2E000E1D64D /* Sponty-Mocap-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
