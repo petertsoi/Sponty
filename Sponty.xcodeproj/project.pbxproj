@@ -150,6 +150,8 @@
 		0A425C0114A981C400A34E01 /* trimfull.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A425BFF14A981C400A34E01 /* trimfull.png */; };
 		0A425C0214A981C400A34E01 /* trimfull@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A425C0014A981C400A34E01 /* trimfull@2x.png */; };
 		0A425C0414A986A100A34E01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A425C0314A986A100A34E01 /* QuartzCore.framework */; };
+		0A469DA814EE54850080CE1D /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A469DA714EE54850080CE1D /* PlaceMapView.m */; };
+		0A469DA914EE54850080CE1D /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A469DA714EE54850080CE1D /* PlaceMapView.m */; };
 		0A4DD155148890C600B8D329 /* bespontaneous_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD14E148890C600B8D329 /* bespontaneous_btn.png */; };
 		0A4DD156148890C600B8D329 /* bespontaneous_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD14F148890C600B8D329 /* bespontaneous_btn@2x.png */; };
 		0A4DD157148890C600B8D329 /* bgpattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD150148890C600B8D329 /* bgpattern.png */; };
@@ -159,7 +161,6 @@
 		0A4DD15B148890C600B8D329 /* mocaptrackscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD154148890C600B8D329 /* mocaptrackscreen@2x.png */; };
 		0A56357B14845608000A1EEE /* PlaceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56357A14845608000A1EEE /* PlaceDetailView.m */; };
 		0A56357D1484564F000A1EEE /* PlaceDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A56357C1484564F000A1EEE /* PlaceDetailView.xib */; };
-		0A61631214EE391E00C46E35 /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A61631114EE391D00C46E35 /* PlaceMapView.m */; };
 		0A6E6F9414DA82E300FE0DDD /* PlaceListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E6F9314DA82E300FE0DDD /* PlaceListViewCell.m */; };
 		0A6E6F9714DA82FB00FE0DDD /* PlaceListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6E6F9614DA82FB00FE0DDD /* PlaceListViewCell.xib */; };
 		0A6E6F9C14DA893400FE0DDD /* listTabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6E6F9814DA893400FE0DDD /* listTabActive.png */; };
@@ -277,6 +278,8 @@
 		0A425BFF14A981C400A34E01 /* trimfull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trimfull.png; path = png/trimfull.png; sourceTree = "<group>"; };
 		0A425C0014A981C400A34E01 /* trimfull@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trimfull@2x.png"; path = "png/trimfull@2x.png"; sourceTree = "<group>"; };
 		0A425C0314A986A100A34E01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0A469DA614EE54850080CE1D /* PlaceMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMapView.h; sourceTree = "<group>"; };
+		0A469DA714EE54850080CE1D /* PlaceMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapView.m; sourceTree = "<group>"; };
 		0A4DD14E148890C600B8D329 /* bespontaneous_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bespontaneous_btn.png; path = png/bespontaneous_btn.png; sourceTree = "<group>"; };
 		0A4DD14F148890C600B8D329 /* bespontaneous_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bespontaneous_btn@2x.png"; path = "png/bespontaneous_btn@2x.png"; sourceTree = "<group>"; };
 		0A4DD150148890C600B8D329 /* bgpattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgpattern.png; path = png/bgpattern.png; sourceTree = "<group>"; };
@@ -287,8 +290,6 @@
 		0A56357914845608000A1EEE /* PlaceDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailView.h; sourceTree = "<group>"; };
 		0A56357A14845608000A1EEE /* PlaceDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailView.m; sourceTree = "<group>"; };
 		0A56357C1484564F000A1EEE /* PlaceDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceDetailView.xib; sourceTree = "<group>"; };
-		0A61631114EE391D00C46E35 /* PlaceMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapView.m; sourceTree = "<group>"; };
-		0A61631314EE394500C46E35 /* PlaceMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMapView.h; sourceTree = "<group>"; };
 		0A6E6F9214DA82E300FE0DDD /* PlaceListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceListViewCell.h; sourceTree = "<group>"; };
 		0A6E6F9314DA82E300FE0DDD /* PlaceListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceListViewCell.m; sourceTree = "<group>"; };
 		0A6E6F9614DA82FB00FE0DDD /* PlaceListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceListViewCell.xib; sourceTree = "<group>"; };
@@ -459,7 +460,6 @@
 		0A7C254214836C11003DA519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AB658FE14845C6C00716B6E /* MapKit.framework */,
 				0AF8931F14DBD98C00ED7F9F /* CoreLocation.framework */,
 				0A425C0314A986A100A34E01 /* QuartzCore.framework */,
 				0A7C254314836C11003DA519 /* UIKit.framework */,
@@ -503,8 +503,8 @@
 				0AEDE98014DAF84000418AE5 /* PlaceLoader.m */,
 				0AD97ECC14DA722A002B86F5 /* PlaceTableView.h */,
 				0AD97ECD14DA722A002B86F5 /* PlaceTableView.m */,
-				0A61631314EE394500C46E35 /* PlaceMapView.h */,
-				0A61631114EE391D00C46E35 /* PlaceMapView.m */,
+				0A469DA614EE54850080CE1D /* PlaceMapView.h */,
+				0A469DA714EE54850080CE1D /* PlaceMapView.m */,
 				0A0D46871484129400B6B32D /* PlaceViewController.h */,
 				0A0D46881484129400B6B32D /* PlaceViewController.m */,
 				0AB043A914B7E1D000663903 /* PlaceScrollerView.h */,
@@ -532,6 +532,7 @@
 		0A7C254A14836C11003DA519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0AB658FE14845C6C00716B6E /* MapKit.framework */,
 				0A7C254B14836C11003DA519 /* Sponty-Info.plist */,
 				0A02B05D14ECE1EB00C108EF /* Spontyapp-Info.plist */,
 				0A7C254C14836C11003DA519 /* InfoPlist.strings */,
@@ -938,6 +939,7 @@
 				0A02AFFF14ECE1E900C108EF /* SBJsonWriter.m in Sources */,
 				0A02B00014ECE1E900C108EF /* FeedbackViewController.m in Sources */,
 				0A02B00114ECE1E900C108EF /* CustomTextField.m in Sources */,
+				0A469DA914EE54850080CE1D /* PlaceMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,7 +980,7 @@
 				0AAB932A14E37F9500DDE13B /* SBJsonWriter.m in Sources */,
 				0A02AFBF14ECCEC800C108EF /* FeedbackViewController.m in Sources */,
 				0A02AFDB14ECD77900C108EF /* CustomTextField.m in Sources */,
-				0A61631214EE391E00C46E35 /* PlaceMapView.m in Sources */,
+				0A469DA814EE54850080CE1D /* PlaceMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,7 +1059,7 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Suman Venkataswamy";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1073,7 +1075,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
+				PROVISIONING_PROFILE = "0DD7728B-D0D4-49D3-BEB9-2067B7A0DB50";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1087,7 +1089,7 @@
 					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Tsoi (94YD5NUQPT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Suman Venkataswamy";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_THUMB_SUPPORT = NO;
@@ -1097,7 +1099,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "F6FD6F5F-497C-49F9-8452-48D92FDCCC95";
+				PROVISIONING_PROFILE = "0DD7728B-D0D4-49D3-BEB9-2067B7A0DB50";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
