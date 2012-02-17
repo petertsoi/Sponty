@@ -105,18 +105,12 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint currentTouchLocation = [[touches anyObject] locationInView:self];
-    //if (fabsf(currentTouchLocation.x - lastRecordedLocation.x) < SCRUB_RESOLUTION) {
-        /*
-        contents.frame = CGRectMake(0 - (currentSelection * self.frame.size.width) + currentTouchLocation.x - touchStartLocation.x, contents.frame.origin.y, 
-                                contents.frame.size.width, contents.frame.size.height);
-         */
-        int i = 0;
-        for (UIView *currentModule in modules) {
-            currentModule.frame = CGRectMake(10 + (i * self.frame.size.width) - (currentSelection * self.frame.size.width) + currentTouchLocation.x - touchStartLocation.x, currentModule.frame.origin.y, currentModule.frame.size.width, currentModule.frame.size.height);
-            ++i;
-        }
-        lastRecordedLocation = currentTouchLocation;
-    //}
+    int i = 0;
+    for (UIView *currentModule in modules) {
+        currentModule.frame = CGRectMake(10 + (i * self.frame.size.width) - (currentSelection * self.frame.size.width) + currentTouchLocation.x - touchStartLocation.x, currentModule.frame.origin.y, currentModule.frame.size.width, currentModule.frame.size.height);
+        ++i;
+    }
+    lastRecordedLocation = currentTouchLocation;
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -130,7 +124,7 @@
             [delagate.navigationController popViewControllerAnimated:YES];
             [self snapMiddleWithDelay:0.25];
         }
-        else if (currentSelection > 0) 
+        else if (currentSelection > 0)
             [self scrollRight:self];
     } else {
         [self snapMiddle];

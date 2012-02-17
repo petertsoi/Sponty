@@ -54,7 +54,6 @@
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    //NSLog(@"Touches began in list view");
     [self.superview touchesBegan:touches withEvent:event];
 }
 
@@ -63,22 +62,11 @@
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    //NSLog(@"Touches ended in list view");
     [self.superview touchesEnded:touches withEvent:event];
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    //NSLog(@"Touches canceled in list view");
     [self.superview touchesEnded:touches withEvent:event];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

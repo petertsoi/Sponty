@@ -38,7 +38,6 @@
         loadedPlaces = [[NSMutableArray alloc] init];
         [self.view setBackgroundColor:[UIColor clearColor]];
         
-        
         loader = [[PlaceLoader alloc] initWithController:self];
         places = [[loader getAllPlaces] mutableCopy];
         
