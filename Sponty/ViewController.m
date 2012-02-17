@@ -41,11 +41,14 @@
 #pragma mark - View lifecycle
 
 - (IBAction) startButtonPressed:(id) sender {
+    [TestFlight passCheckpoint:@"Pressed 'Be Spontaneous' Button"];
     if (placeVC) {
         [placeVC release];
         placeVC = nil;
     }
-    placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" bundle:[NSBundle mainBundle] withController:self];
+    placeVC = [[PlaceViewController alloc] initWithNibName:@"PlaceViewController" 
+                                                    bundle:[NSBundle mainBundle] 
+                                            withController:self];
     [self switchedToNewPlace:placeVC];
 }
 
@@ -89,6 +92,7 @@
 
 - (void)swipedLeft:(id)sender {
     if (placeVC) {
+        [TestFlight passCheckpoint:@"Swiped from splash page to cached results"];
         [self.navigationController pushViewController:placeVC animated:YES];
     }
 }
@@ -96,8 +100,6 @@
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace {
     placeVC = newPlace;
     placeVC.delegate = self;
-    //self.view = newPlace.view;
-    //[self.view insertSubview:newPlace.view atIndex:[[self.view subviews] count] -1];
     [self.navigationController pushViewController:newPlace animated:YES];
     
 }
@@ -134,31 +136,6 @@
     [self.locationManager startUpdatingLocation];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
@@ -167,6 +144,7 @@
 
 - (void) dealloc { 
     [locationManager release];
+    [gestureRecognizer release];
     [super dealloc];
 }
 

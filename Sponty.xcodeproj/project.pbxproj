@@ -184,6 +184,10 @@
 		0A9CB6941488123000E7263B /* MocapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CB6931488123000E7263B /* MocapOverlayView.m */; };
 		0AA0E6DF14A2800300436B96 /* RegistrationSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA0E6DD14A2800300436B96 /* RegistrationSelectionViewController.m */; };
 		0AA0E6E014A2800300436B96 /* RegistrationSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0E6DE14A2800300436B96 /* RegistrationSelectionViewController.xib */; };
+		0AA4DF3614EE245A00599AF6 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3514EE245A00599AF6 /* libTestFlight.a */; };
+		0AA4DF3714EE245A00599AF6 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3514EE245A00599AF6 /* libTestFlight.a */; };
+		0AA4DF3A14EE24EF00599AF6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3914EE24EF00599AF6 /* libz.dylib */; };
+		0AA4DF3B14EE24FB00599AF6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3914EE24EF00599AF6 /* libz.dylib */; };
 		0AAB931F14E37F9500DDE13B /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB930714E37F9500DDE13B /* NSObject+SBJson.m */; };
 		0AAB932014E37F9500DDE13B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB930A14E37F9500DDE13B /* SBJsonParser.m */; };
 		0AAB932114E37F9500DDE13B /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB930C14E37F9500DDE13B /* SBJsonStreamParser.m */; };
@@ -324,6 +328,9 @@
 		0AA0E6DC14A2800300436B96 /* RegistrationSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationSelectionViewController.h; sourceTree = "<group>"; };
 		0AA0E6DD14A2800300436B96 /* RegistrationSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationSelectionViewController.m; sourceTree = "<group>"; };
 		0AA0E6DE14A2800300436B96 /* RegistrationSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationSelectionViewController.xib; sourceTree = "<group>"; };
+		0AA4DF3514EE245A00599AF6 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = TestFlight/libTestFlight.a; sourceTree = "<group>"; };
+		0AA4DF3814EE249B00599AF6 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlight/TestFlight.h; sourceTree = SOURCE_ROOT; };
+		0AA4DF3914EE24EF00599AF6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0AAB930614E37F9500DDE13B /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0AAB930714E37F9500DDE13B /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		0AAB930814E37F9500DDE13B /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -417,6 +424,8 @@
 				0A02B00614ECE1E900C108EF /* UIKit.framework in Frameworks */,
 				0A02B00714ECE1E900C108EF /* Foundation.framework in Frameworks */,
 				0A02B00814ECE1E900C108EF /* CoreGraphics.framework in Frameworks */,
+				0AA4DF3714EE245A00599AF6 /* libTestFlight.a in Frameworks */,
+				0AA4DF3A14EE24EF00599AF6 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +439,8 @@
 				0A7C254414836C11003DA519 /* UIKit.framework in Frameworks */,
 				0A7C254614836C11003DA519 /* Foundation.framework in Frameworks */,
 				0A7C254814836C11003DA519 /* CoreGraphics.framework in Frameworks */,
+				0AA4DF3614EE245A00599AF6 /* libTestFlight.a in Frameworks */,
+				0AA4DF3B14EE24FB00599AF6 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +471,9 @@
 		0A7C254214836C11003DA519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AA4DF3514EE245A00599AF6 /* libTestFlight.a */,
+				0AA4DF3914EE24EF00599AF6 /* libz.dylib */,
+				0AB658FE14845C6C00716B6E /* MapKit.framework */,
 				0AF8931F14DBD98C00ED7F9F /* CoreLocation.framework */,
 				0A425C0314A986A100A34E01 /* QuartzCore.framework */,
 				0A7C254314836C11003DA519 /* UIKit.framework */,
@@ -472,6 +486,7 @@
 		0A7C254914836C11003DA519 /* Sponty */ = {
 			isa = PBXGroup;
 			children = (
+				0AA4DF3814EE249B00599AF6 /* TestFlight.h */,
 				0AAB930514E37F9500DDE13B /* JSON */,
 				0A237A6B14DB4E25005536C9 /* AsynchronousImageView.h */,
 				0A237A6C14DB4E25005536C9 /* AsynchronousImageView.m */,
@@ -532,7 +547,6 @@
 		0A7C254A14836C11003DA519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0AB658FE14845C6C00716B6E /* MapKit.framework */,
 				0A7C254B14836C11003DA519 /* Sponty-Info.plist */,
 				0A02B05D14ECE1EB00C108EF /* Spontyapp-Info.plist */,
 				0A7C254C14836C11003DA519 /* InfoPlist.strings */,
@@ -1031,6 +1045,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Spontyapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlight\"",
+				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1045,6 +1063,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Spontyapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlight\"",
+				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1114,6 +1136,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlight\"",
+				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1128,6 +1154,10 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlight\"",
+				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};

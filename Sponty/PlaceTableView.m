@@ -42,6 +42,7 @@
     float dx = fabsf(curTouchLocation.x - touchBeganLocation.x);
     float dy = fabs(curTouchLocation.y - touchBeganLocation.y);
     if (dx > 7.0f && dx/dy > 2.0f) {
+        [TestFlight passCheckpoint:@"Swipe detected on list"];
         [super touchesCancelled:touches withEvent:event];
         [self.superview touchesEnded:touches withEvent:event];
     } else {

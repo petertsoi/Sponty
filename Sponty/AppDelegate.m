@@ -25,6 +25,10 @@ typedef enum  {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [TestFlight takeOff:@"6476792be5e8dc1bf217ba0215fe89a7_NjA4OTQyMDEyLTAyLTA4IDE4OjE1OjQ1LjYwNTI2MQ"];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
