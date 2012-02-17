@@ -84,6 +84,7 @@
     }
     CGImageRef imageRef = [sourceImage CGImage];
     if (YES) { // CROP STUFF
+        NSLog(@"Resizing image from (%f x %f) to (%f x %f)", image.size.width, image.size.height, targetWidth, targetHeight);
         float targetAspect = targetSize.width / targetSize.height;
         float currentAspect = image.size.width / targetSize.height;
         CGRect cropRect;

@@ -41,6 +41,7 @@
 #pragma mark - View lifecycle
 
 - (IBAction) startButtonPressed:(id) sender {
+    [TestFlight passCheckpoint:@"Pressed 'Be Spontaneous' button."];
     if (placeVC) {
         [placeVC release];
         placeVC = nil;
@@ -89,6 +90,7 @@
 
 - (void)swipedLeft:(id)sender {
     if (placeVC) {
+        [TestFlight passCheckpoint:@"Swiped from splash to cached results"];
         [self.navigationController pushViewController:placeVC animated:YES];
     }
 }
@@ -96,8 +98,6 @@
 - (void) switchedToNewPlace:(PlaceViewController *)newPlace {
     placeVC = newPlace;
     placeVC.delegate = self;
-    //self.view = newPlace.view;
-    //[self.view insertSubview:newPlace.view atIndex:[[self.view subviews] count] -1];
     [self.navigationController pushViewController:newPlace animated:YES];
     
 }

@@ -55,6 +55,7 @@
     } else {
         data = feedback.text;
     }
+    [TestFlight submitFeedback:data];
     NSString *params = [[NSString alloc] initWithFormat:@"name=%@&data=%@", nameStr, data];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];

@@ -88,6 +88,9 @@
 }
 
 - (void)setCurrentViewToIndex:(int)index {
+    if (index == indexOfListView) {
+        [TestFlight passCheckpoint:@"Reached list view"];
+    }
     if (index < [loadedPlaces count]) {
         currentView = [(Place * )[loadedPlaces objectAtIndex:index] view];
     }
@@ -107,6 +110,7 @@
 }
 
 - (void) hideMapView {
+    [TestFlight passCheckpoint:@"Hiding Map."];
     [self.view setUserInteractionEnabled:NO];
     [UIView transitionFromView:mapView toView:currentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
         [mapView retain];
@@ -124,7 +128,7 @@
     if (mapView && [mapView retainCount] > 0) {
         [mapView release];
     }
-    
+    [TestFlight passCheckpoint:@"Launching Map."];
     mapView = [[[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0] retain];
     mapView.delegate = self;
     [UIView transitionFromView:currentView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
@@ -186,6 +190,7 @@
         int viewIndex = [loadedPlaces indexOfObject:thisPlace] + 1;
         [(PlaceScrollerView* )self.view scrollTo:viewIndex];
     }
+    [TestFlight passCheckpoint:@"Selected location from list."];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

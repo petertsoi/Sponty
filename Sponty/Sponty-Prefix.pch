@@ -8,11 +8,10 @@
 #warning "This project uses features only available in iOS SDK 4.0 and later."
 #endif
 
-#ifndef __MOCAP
-//#define __MOCAP true
-#endif
-
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "TestFlight.h"
 #endif
+
+#define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
