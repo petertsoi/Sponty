@@ -24,7 +24,6 @@
 		0A02AFE314ECE1E900C108EF /* CustomNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C2564148374DC003DA519 /* CustomNavBar.m */; };
 		0A02AFE414ECE1E900C108EF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE13141483860E003FFE86 /* SettingsViewController.m */; };
 		0A02AFE514ECE1E900C108EF /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46881484129400B6B32D /* PlaceViewController.m */; };
-		0A02AFE614ECE1E900C108EF /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46931484186F00B6B32D /* PlaceMapView.m */; };
 		0A02AFE714ECE1E900C108EF /* PlaceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56357A14845608000A1EEE /* PlaceDetailView.m */; };
 		0A02AFE814ECE1E900C108EF /* MocapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CB6931488123000E7263B /* MocapOverlayView.m */; };
 		0A02AFE914ECE1E900C108EF /* RegistrationSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA0E6DD14A2800300436B96 /* RegistrationSelectionViewController.m */; };
@@ -139,7 +138,6 @@
 		0A0D46891484129400B6B32D /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46881484129400B6B32D /* PlaceViewController.m */; };
 		0A0D468D1484141C00B6B32D /* PlacePageBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D468B1484141C00B6B32D /* PlacePageBG.png */; };
 		0A0D468E1484141C00B6B32D /* PlacePageBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D468C1484141C00B6B32D /* PlacePageBG@2x.png */; };
-		0A0D46941484186F00B6B32D /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D46931484186F00B6B32D /* PlaceMapView.m */; };
 		0A237A6D14DB4E25005536C9 /* AsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A237A6C14DB4E25005536C9 /* AsynchronousImageView.m */; };
 		0A425BF014A978A700A34E01 /* trim.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A425BEE14A978A700A34E01 /* trim.png */; };
 		0A425BF114A978A700A34E01 /* trim@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A425BEF14A978A700A34E01 /* trim@2x.png */; };
@@ -161,6 +159,7 @@
 		0A4DD15B148890C600B8D329 /* mocaptrackscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD154148890C600B8D329 /* mocaptrackscreen@2x.png */; };
 		0A56357B14845608000A1EEE /* PlaceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A56357A14845608000A1EEE /* PlaceDetailView.m */; };
 		0A56357D1484564F000A1EEE /* PlaceDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A56357C1484564F000A1EEE /* PlaceDetailView.xib */; };
+		0A61631214EE391E00C46E35 /* PlaceMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A61631114EE391D00C46E35 /* PlaceMapView.m */; };
 		0A6E6F9414DA82E300FE0DDD /* PlaceListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E6F9314DA82E300FE0DDD /* PlaceListViewCell.m */; };
 		0A6E6F9714DA82FB00FE0DDD /* PlaceListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6E6F9614DA82FB00FE0DDD /* PlaceListViewCell.xib */; };
 		0A6E6F9C14DA893400FE0DDD /* listTabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6E6F9814DA893400FE0DDD /* listTabActive.png */; };
@@ -184,10 +183,6 @@
 		0A9CB6941488123000E7263B /* MocapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CB6931488123000E7263B /* MocapOverlayView.m */; };
 		0AA0E6DF14A2800300436B96 /* RegistrationSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA0E6DD14A2800300436B96 /* RegistrationSelectionViewController.m */; };
 		0AA0E6E014A2800300436B96 /* RegistrationSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0E6DE14A2800300436B96 /* RegistrationSelectionViewController.xib */; };
-		0AA4DF3614EE245A00599AF6 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3514EE245A00599AF6 /* libTestFlight.a */; };
-		0AA4DF3714EE245A00599AF6 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3514EE245A00599AF6 /* libTestFlight.a */; };
-		0AA4DF3A14EE24EF00599AF6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3914EE24EF00599AF6 /* libz.dylib */; };
-		0AA4DF3B14EE24FB00599AF6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA4DF3914EE24EF00599AF6 /* libz.dylib */; };
 		0AAB931F14E37F9500DDE13B /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB930714E37F9500DDE13B /* NSObject+SBJson.m */; };
 		0AAB932014E37F9500DDE13B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB930A14E37F9500DDE13B /* SBJsonParser.m */; };
 		0AAB932114E37F9500DDE13B /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB930C14E37F9500DDE13B /* SBJsonStreamParser.m */; };
@@ -269,8 +264,6 @@
 		0A0D46881484129400B6B32D /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		0A0D468B1484141C00B6B32D /* PlacePageBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlacePageBG.png; path = png/PlacePageBG.png; sourceTree = "<group>"; };
 		0A0D468C1484141C00B6B32D /* PlacePageBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlacePageBG@2x.png"; path = "png/PlacePageBG@2x.png"; sourceTree = "<group>"; };
-		0A0D46921484186F00B6B32D /* PlaceMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceMapView.h; path = ../PlaceMapView.h; sourceTree = "<group>"; };
-		0A0D46931484186F00B6B32D /* PlaceMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceMapView.m; path = ../PlaceMapView.m; sourceTree = "<group>"; };
 		0A237A6B14DB4E25005536C9 /* AsynchronousImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsynchronousImageView.h; sourceTree = "<group>"; };
 		0A237A6C14DB4E25005536C9 /* AsynchronousImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsynchronousImageView.m; sourceTree = "<group>"; };
 		0A425BEE14A978A700A34E01 /* trim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trim.png; path = png/trim.png; sourceTree = "<group>"; };
@@ -294,6 +287,8 @@
 		0A56357914845608000A1EEE /* PlaceDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailView.h; sourceTree = "<group>"; };
 		0A56357A14845608000A1EEE /* PlaceDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailView.m; sourceTree = "<group>"; };
 		0A56357C1484564F000A1EEE /* PlaceDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceDetailView.xib; sourceTree = "<group>"; };
+		0A61631114EE391D00C46E35 /* PlaceMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapView.m; sourceTree = "<group>"; };
+		0A61631314EE394500C46E35 /* PlaceMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMapView.h; sourceTree = "<group>"; };
 		0A6E6F9214DA82E300FE0DDD /* PlaceListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceListViewCell.h; sourceTree = "<group>"; };
 		0A6E6F9314DA82E300FE0DDD /* PlaceListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceListViewCell.m; sourceTree = "<group>"; };
 		0A6E6F9614DA82FB00FE0DDD /* PlaceListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceListViewCell.xib; sourceTree = "<group>"; };
@@ -328,9 +323,6 @@
 		0AA0E6DC14A2800300436B96 /* RegistrationSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationSelectionViewController.h; sourceTree = "<group>"; };
 		0AA0E6DD14A2800300436B96 /* RegistrationSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationSelectionViewController.m; sourceTree = "<group>"; };
 		0AA0E6DE14A2800300436B96 /* RegistrationSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationSelectionViewController.xib; sourceTree = "<group>"; };
-		0AA4DF3514EE245A00599AF6 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = TestFlight/libTestFlight.a; sourceTree = "<group>"; };
-		0AA4DF3814EE249B00599AF6 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlight/TestFlight.h; sourceTree = SOURCE_ROOT; };
-		0AA4DF3914EE24EF00599AF6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0AAB930614E37F9500DDE13B /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0AAB930714E37F9500DDE13B /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		0AAB930814E37F9500DDE13B /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -424,8 +416,6 @@
 				0A02B00614ECE1E900C108EF /* UIKit.framework in Frameworks */,
 				0A02B00714ECE1E900C108EF /* Foundation.framework in Frameworks */,
 				0A02B00814ECE1E900C108EF /* CoreGraphics.framework in Frameworks */,
-				0AA4DF3714EE245A00599AF6 /* libTestFlight.a in Frameworks */,
-				0AA4DF3A14EE24EF00599AF6 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +429,6 @@
 				0A7C254414836C11003DA519 /* UIKit.framework in Frameworks */,
 				0A7C254614836C11003DA519 /* Foundation.framework in Frameworks */,
 				0A7C254814836C11003DA519 /* CoreGraphics.framework in Frameworks */,
-				0AA4DF3614EE245A00599AF6 /* libTestFlight.a in Frameworks */,
-				0AA4DF3B14EE24FB00599AF6 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,8 +459,6 @@
 		0A7C254214836C11003DA519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AA4DF3514EE245A00599AF6 /* libTestFlight.a */,
-				0AA4DF3914EE24EF00599AF6 /* libz.dylib */,
 				0AB658FE14845C6C00716B6E /* MapKit.framework */,
 				0AF8931F14DBD98C00ED7F9F /* CoreLocation.framework */,
 				0A425C0314A986A100A34E01 /* QuartzCore.framework */,
@@ -486,7 +472,6 @@
 		0A7C254914836C11003DA519 /* Sponty */ = {
 			isa = PBXGroup;
 			children = (
-				0AA4DF3814EE249B00599AF6 /* TestFlight.h */,
 				0AAB930514E37F9500DDE13B /* JSON */,
 				0A237A6B14DB4E25005536C9 /* AsynchronousImageView.h */,
 				0A237A6C14DB4E25005536C9 /* AsynchronousImageView.m */,
@@ -518,8 +503,8 @@
 				0AEDE98014DAF84000418AE5 /* PlaceLoader.m */,
 				0AD97ECC14DA722A002B86F5 /* PlaceTableView.h */,
 				0AD97ECD14DA722A002B86F5 /* PlaceTableView.m */,
-				0A0D46921484186F00B6B32D /* PlaceMapView.h */,
-				0A0D46931484186F00B6B32D /* PlaceMapView.m */,
+				0A61631314EE394500C46E35 /* PlaceMapView.h */,
+				0A61631114EE391D00C46E35 /* PlaceMapView.m */,
 				0A0D46871484129400B6B32D /* PlaceViewController.h */,
 				0A0D46881484129400B6B32D /* PlaceViewController.m */,
 				0AB043A914B7E1D000663903 /* PlaceScrollerView.h */,
@@ -926,7 +911,6 @@
 				0A02AFE314ECE1E900C108EF /* CustomNavBar.m in Sources */,
 				0A02AFE414ECE1E900C108EF /* SettingsViewController.m in Sources */,
 				0A02AFE514ECE1E900C108EF /* PlaceViewController.m in Sources */,
-				0A02AFE614ECE1E900C108EF /* PlaceMapView.m in Sources */,
 				0A02AFE714ECE1E900C108EF /* PlaceDetailView.m in Sources */,
 				0A02AFE814ECE1E900C108EF /* MocapOverlayView.m in Sources */,
 				0A02AFE914ECE1E900C108EF /* RegistrationSelectionViewController.m in Sources */,
@@ -967,7 +951,6 @@
 				0A7C2565148374DC003DA519 /* CustomNavBar.m in Sources */,
 				0ABE13151483860E003FFE86 /* SettingsViewController.m in Sources */,
 				0A0D46891484129400B6B32D /* PlaceViewController.m in Sources */,
-				0A0D46941484186F00B6B32D /* PlaceMapView.m in Sources */,
 				0A56357B14845608000A1EEE /* PlaceDetailView.m in Sources */,
 				0A9CB6941488123000E7263B /* MocapOverlayView.m in Sources */,
 				0AA0E6DF14A2800300436B96 /* RegistrationSelectionViewController.m in Sources */,
@@ -995,6 +978,7 @@
 				0AAB932A14E37F9500DDE13B /* SBJsonWriter.m in Sources */,
 				0A02AFBF14ECCEC800C108EF /* FeedbackViewController.m in Sources */,
 				0A02AFDB14ECD77900C108EF /* CustomTextField.m in Sources */,
+				0A61631214EE391E00C46E35 /* PlaceMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,10 +1029,6 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Spontyapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlight\"",
-				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1063,10 +1043,6 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Spontyapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlight\"",
-				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1136,10 +1112,6 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlight\"",
-				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1154,10 +1126,6 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Sponty/Sponty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlight\"",
-				);
 				PRODUCT_NAME = Sponty;
 				WRAPPER_EXTENSION = app;
 			};

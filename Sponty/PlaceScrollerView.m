@@ -120,7 +120,6 @@
         [self scrollLeft:self];
     } else if (location.x - touchStartLocation.x > 100){
         if (currentSelection == 0) {
-            [TestFlight passCheckpoint:@"Swiped back to splash screen."];
             [delagate.navigationController popViewControllerAnimated:YES];
             [self snapMiddleWithDelay:0.25];
         }

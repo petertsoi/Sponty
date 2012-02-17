@@ -108,7 +108,6 @@
 - (void) hideMapView {
     [self.view setUserInteractionEnabled:NO];
     [UIView transitionFromView:mapView toView:currentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
-        [TestFlight passCheckpoint:@"Hiding map."];
         [mapView retain];
         [self.view setUserInteractionEnabled:YES];
     }];
@@ -127,7 +126,6 @@
     mapView = [[[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0] retain];
     mapView.delegate = self;
     [UIView transitionFromView:currentView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
-        [TestFlight passCheckpoint:@"Showing map."];
         [mapView roundCorners];
         [mapView setLatLong:currentView.place.latLong];
     }];
@@ -186,7 +184,6 @@
         int viewIndex = [loadedPlaces indexOfObject:thisPlace] + 1;
         [(PlaceScrollerView* )self.view scrollTo:viewIndex];
     }
-    [TestFlight passCheckpoint:@"Selected a location from list."];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

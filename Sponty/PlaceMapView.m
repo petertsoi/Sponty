@@ -40,7 +40,6 @@
 }
 
 - (IBAction) getDirections:(id)sender {
-    [TestFlight passCheckpoint:@"Fetching directions."];
     [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%f,%f&saddr=%f,%f", placeLocation.latitude, placeLocation.longitude, mDelegate.delegate.myLocation.latitude, mDelegate.delegate.myLocation.longitude]]];
 }
 
