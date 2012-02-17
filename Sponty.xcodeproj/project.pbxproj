@@ -156,6 +156,8 @@
 		0A469DD114EE59930080CE1D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A469DCF14EE59930080CE1D /* libTestFlight.a */; };
 		0A469DD314EE5A1F0080CE1D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A469DD214EE5A1F0080CE1D /* libz.dylib */; };
 		0A469DD414EE5A2C0080CE1D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A469DD214EE5A1F0080CE1D /* libz.dylib */; };
+		0A469DE614EECD1F0080CE1D /* Spontyapp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A469DE514EECD1F0080CE1D /* Spontyapp-Info.plist */; };
+		0A469DE714EECD1F0080CE1D /* Spontyapp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A469DE514EECD1F0080CE1D /* Spontyapp-Info.plist */; };
 		0A4DD155148890C600B8D329 /* bespontaneous_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD14E148890C600B8D329 /* bespontaneous_btn.png */; };
 		0A4DD156148890C600B8D329 /* bespontaneous_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD14F148890C600B8D329 /* bespontaneous_btn@2x.png */; };
 		0A4DD157148890C600B8D329 /* bgpattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DD150148890C600B8D329 /* bgpattern.png */; };
@@ -264,7 +266,6 @@
 		0A02AFD914ECD77800C108EF /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		0A02AFDA14ECD77900C108EF /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		0A02B05B14ECE1E900C108EF /* Sponty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sponty.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A02B05D14ECE1EB00C108EF /* Spontyapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Spontyapp-Info.plist"; path = "/Users/petertsoi/Documents/work/Apps/Sponty/Spontyapp-Info.plist"; sourceTree = "<absolute>"; };
 		0A0D46871484129400B6B32D /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		0A0D46881484129400B6B32D /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		0A0D468B1484141C00B6B32D /* PlacePageBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlacePageBG.png; path = png/PlacePageBG.png; sourceTree = "<group>"; };
@@ -287,6 +288,7 @@
 		0A469DCE14EE58550080CE1D /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlight/TestFlight.h; sourceTree = SOURCE_ROOT; };
 		0A469DCF14EE59930080CE1D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = TestFlight/libTestFlight.a; sourceTree = "<group>"; };
 		0A469DD214EE5A1F0080CE1D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0A469DE514EECD1F0080CE1D /* Spontyapp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Spontyapp-Info.plist"; sourceTree = "<group>"; };
 		0A4DD14E148890C600B8D329 /* bespontaneous_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bespontaneous_btn.png; path = png/bespontaneous_btn.png; sourceTree = "<group>"; };
 		0A4DD14F148890C600B8D329 /* bespontaneous_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bespontaneous_btn@2x.png"; path = "png/bespontaneous_btn@2x.png"; sourceTree = "<group>"; };
 		0A4DD150148890C600B8D329 /* bgpattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgpattern.png; path = png/bgpattern.png; sourceTree = "<group>"; };
@@ -547,7 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				0A7C254B14836C11003DA519 /* Sponty-Info.plist */,
-				0A02B05D14ECE1EB00C108EF /* Spontyapp-Info.plist */,
+				0A469DE514EECD1F0080CE1D /* Spontyapp-Info.plist */,
 				0A7C254C14836C11003DA519 /* InfoPlist.strings */,
 				0A7C254F14836C11003DA519 /* main.m */,
 				0A7C255114836C11003DA519 /* Sponty-Prefix.pch */,
@@ -823,6 +825,7 @@
 				0A02B05514ECE1E900C108EF /* feedbackBoxBG@2x.png in Resources */,
 				0A02B05614ECE1E900C108EF /* textFieldBG.png in Resources */,
 				0A02B05714ECE1E900C108EF /* textFieldBG@2x.png in Resources */,
+				0A469DE714EECD1F0080CE1D /* Spontyapp-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,6 +911,7 @@
 				0A02AFD114ECD48A00C108EF /* feedbackBoxBG@2x.png in Resources */,
 				0A02AFD514ECD6E300C108EF /* textFieldBG.png in Resources */,
 				0A02AFD714ECD6E300C108EF /* textFieldBG@2x.png in Resources */,
+				0A469DE614EECD1F0080CE1D /* Spontyapp-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,7 +1045,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "Spontyapp-Info.plist";
+				INFOPLIST_FILE = "Sponty/Spontyapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1059,7 +1063,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sponty/Sponty-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "Spontyapp-Info.plist";
+				INFOPLIST_FILE = "Sponty/Spontyapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
