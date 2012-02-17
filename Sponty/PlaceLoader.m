@@ -38,7 +38,7 @@
     } else if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onDate"]) {
         who = @"date";
     }
-    coord = CLLocationCoordinate2DMake(37.785834,-122.406417); //Hardcoded SF location
+    //coord = CLLocationCoordinate2DMake(37.785834,-122.406417); //Hardcoded SF location
     NSString * query = [NSString stringWithFormat:@"http://sponty.palash.me:8004/recommend?time=%0.f&location=%f,%f&who=%@", [[NSDate date] timeIntervalSince1970], coord.latitude, coord.longitude, who];
     NSLog(@"%@", query);
     NSURL  *url = [NSURL URLWithString:query];
