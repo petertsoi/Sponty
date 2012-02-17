@@ -39,7 +39,9 @@
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint curTouchLocation = [[touches anyObject] locationInView:self.superview.superview];
-    if (fabsf(curTouchLocation.x - touchBeganLocation.x) > 7.0f && fabs(curTouchLocation.y - touchBeganLocation.y) < 5.0f) {
+    float dx = fabsf(curTouchLocation.x - touchBeganLocation.x);
+    float dy = fabs(curTouchLocation.y - touchBeganLocation.y);
+    if (dx > 7.0f && dx/dy > 2.0f) {
         [super touchesCancelled:touches withEvent:event];
         [self.superview touchesEnded:touches withEvent:event];
     } else {
