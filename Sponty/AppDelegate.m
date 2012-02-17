@@ -30,7 +30,6 @@ typedef enum  {
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     [TestFlight takeOff:@"6476792be5e8dc1bf217ba0215fe89a7_NjA4OTQyMDEyLTAyLTA4IDE4OjE1OjQ1LjYwNTI2MQ"];
-    
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     [navigationController setNavigationBarHidden:YES];
