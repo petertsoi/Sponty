@@ -38,6 +38,7 @@
         loadedPlaces = [[NSMutableArray alloc] init];
         [self.view setBackgroundColor:[UIColor clearColor]];
         
+        
         loader = [[PlaceLoader alloc] initWithController:self];
         places = [[loader getAllPlaces] mutableCopy];
         
@@ -128,6 +129,7 @@
         [mapView release];
     }
     [TestFlight passCheckpoint:@"Launching Map."];
+
     mapView = [[[[NSBundle mainBundle] loadNibNamed:@"PlaceMapView" owner:self options:nil] objectAtIndex:0] retain];
     mapView.delegate = self;
     [UIView transitionFromView:currentView toView:mapView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished){
